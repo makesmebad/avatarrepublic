@@ -12115,7 +12115,7 @@ html[data-theme="dark"], html.dark {
 
 /* Desktop reputation history; mobile keeps its existing card layout. */
 @media (width > 800px) {
-  #pun #pun-respect #pun-main > h1 {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > h1 {
     margin:0 0 18px;
     padding:18px 22px;
     border:1px solid var(--sage-green);
@@ -12126,7 +12126,7 @@ html[data-theme="dark"], html.dark {
     overflow-wrap:anywhere;
   }
 
-  #pun #pun-respect #pun-main > .section > .container {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section > .container {
     padding:0;
     border:1px solid var(--sage-green);
     border-radius:14px;
@@ -12134,7 +12134,7 @@ html[data-theme="dark"], html.dark {
     overflow:hidden;
   }
 
-  #pun #pun-respect #pun-main > .section table {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section table {
     width:100%;
     table-layout:fixed;
     border-collapse:collapse;
@@ -12143,7 +12143,7 @@ html[data-theme="dark"], html.dark {
     font:400 14px/1.5 var(--font-ui, Arial, sans-serif);
   }
 
-  #pun #pun-respect #pun-main > .section :is(th, td) {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section :is(th, td) {
     padding:14px 16px;
     border:0;
     border-bottom:1px solid var(--sage-green);
@@ -12152,57 +12152,57 @@ html[data-theme="dark"], html.dark {
     overflow-wrap:anywhere;
   }
 
-  #pun #pun-respect #pun-main > .section th {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section th {
     background:var(--pale-green);
     color:var(--teal);
     font-weight:600;
   }
 
-  #pun #pun-respect #pun-main > .section tbody tr {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section tbody tr {
     background:var(--white);
     border:0;
   }
 
-  #pun #pun-respect #pun-main > .section tbody tr:nth-child(even) {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section tbody tr:nth-child(even) {
     background:color-mix(in srgb, var(--pale-green) 45%, var(--white));
   }
 
-  #pun #pun-respect #pun-main > .section tbody tr:hover {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section tbody tr:hover {
     background:var(--light-teal);
   }
 
-  #pun #pun-respect #pun-main > .section tbody tr:last-child td {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section tbody tr:last-child td {
     border-bottom:0;
   }
 
-  #pun #pun-respect #pun-main > .section .tcl {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section .tcl {
     width:170px;
     font-size:12px;
     font-variant-numeric:tabular-nums;
   }
 
-  #pun #pun-respect #pun-main > .section .tc2 {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section .tc2 {
     width:64px;
     text-align:center;
   }
 
-  #pun #pun-respect #pun-main > .section td.tc2 {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section td.tc2 {
     color:var(--teal);
     font-size:22px;
     font-weight:700;
   }
 
-  #pun #pun-respect #pun-main > .section td.tc3:not(.tc4) a {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section td.tc3:not(.tc4) a {
     font-weight:600;
   }
 
-  #pun #pun-respect #pun-main > .section td a {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section td a {
     color:var(--links-color, var(--teal));
     text-decoration:none;
     overflow-wrap:anywhere;
   }
 
-  #pun #pun-respect #pun-main > .section td a:hover {
+  #pun :is(#pun-respect,#pun-positive) #pun-main > .section td a:hover {
     color:var(--links-hover-color, var(--amber));
     text-decoration:underline;
     text-underline-offset:3px;
