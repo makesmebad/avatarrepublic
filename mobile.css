@@ -24655,3 +24655,10 @@
     background:var(--pale-green) !important;
   }
 }
+
+/* Keep the status details, but omit the mobile section heading. */
+@media (max-width:800px) {
+  #pun #pun-status > h2 {
+    display:none!important;
+  }
+}
