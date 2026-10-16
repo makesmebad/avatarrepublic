@@ -8789,8 +8789,7 @@
   }
 
   #pun :is(#pun-positive,#pun-respect) #pun-main>.section>.container>table>tbody>tr>td.tcr::before {
-    content:"      : ";
-    font-size:11px;
+    content:none;
   }
 
   #pun :is(#pun-positive,#pun-respect) #pun-main>.section>.container>table>tbody>tr:has(>td.tc4) {
@@ -8807,8 +8806,7 @@
   }
 
   #pun :is(#pun-positive,#pun-respect) #pun-main>.section>.container>table>tbody>tr>td.tc4::before {
-    content:"      : ";
-    font-size:11px;
+    content:none;
   }
 
   #pun :is(#pun-positive,#pun-respect) #pun-main>.section>.container>table>tbody>tr:has(>td.tc4)>td.tcr {

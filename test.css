@@ -12112,3 +12112,99 @@ html[data-theme="dark"], html.dark {
 #pun .post-sig > dt {
   display:none;
 }
+
+/* Desktop reputation history; mobile keeps its existing card layout. */
+@media (width > 800px) {
+  #pun #pun-respect #pun-main > h1 {
+    margin:0 0 18px;
+    padding:18px 22px;
+    border:1px solid var(--sage-green);
+    border-radius:14px;
+    background:var(--pale-green);
+    color:var(--slate-blue);
+    font:600 clamp(22px, 2.2vw, 30px)/1.3 var(--font-body, Georgia, serif);
+    overflow-wrap:anywhere;
+  }
+
+  #pun #pun-respect #pun-main > .section > .container {
+    padding:0;
+    border:1px solid var(--sage-green);
+    border-radius:14px;
+    background:var(--white);
+    overflow:hidden;
+  }
+
+  #pun #pun-respect #pun-main > .section table {
+    width:100%;
+    table-layout:fixed;
+    border-collapse:collapse;
+    border-spacing:0;
+    color:var(--slate-blue);
+    font:400 14px/1.5 var(--font-ui, Arial, sans-serif);
+  }
+
+  #pun #pun-respect #pun-main > .section :is(th, td) {
+    padding:14px 16px;
+    border:0;
+    border-bottom:1px solid var(--sage-green);
+    text-align:left;
+    vertical-align:middle;
+    overflow-wrap:anywhere;
+  }
+
+  #pun #pun-respect #pun-main > .section th {
+    background:var(--pale-green);
+    color:var(--teal);
+    font-weight:600;
+  }
+
+  #pun #pun-respect #pun-main > .section tbody tr {
+    background:var(--white);
+    border:0;
+  }
+
+  #pun #pun-respect #pun-main > .section tbody tr:nth-child(even) {
+    background:color-mix(in srgb, var(--pale-green) 45%, var(--white));
+  }
+
+  #pun #pun-respect #pun-main > .section tbody tr:hover {
+    background:var(--light-teal);
+  }
+
+  #pun #pun-respect #pun-main > .section tbody tr:last-child td {
+    border-bottom:0;
+  }
+
+  #pun #pun-respect #pun-main > .section .tcl {
+    width:170px;
+    font-size:12px;
+    font-variant-numeric:tabular-nums;
+  }
+
+  #pun #pun-respect #pun-main > .section .tc2 {
+    width:64px;
+    text-align:center;
+  }
+
+  #pun #pun-respect #pun-main > .section td.tc2 {
+    color:var(--teal);
+    font-size:22px;
+    font-weight:700;
+  }
+
+  #pun #pun-respect #pun-main > .section td.tc3:not(.tc4) a {
+    font-weight:600;
+  }
+
+  #pun #pun-respect #pun-main > .section td a {
+    color:var(--links-color, var(--teal));
+    text-decoration:none;
+    overflow-wrap:anywhere;
+  }
+
+  #pun #pun-respect #pun-main > .section td a:hover {
+    color:var(--links-hover-color, var(--amber));
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+}
