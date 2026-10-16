@@ -1,0 +1,29 @@
+name: Purge jsDelivr cache
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.css'
+      - '**/*.js'
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Purge changed CSS and JS files
+        shell: bash
+        run: |
+          git fetch origin "${{ github.event.before }}" --depth=1 || true
+
+          git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" \
+            | grep -E '\.(css|js)$' \
+            | while read -r file; do
+                echo "Purging $file"
+                curl -fsS "https://purge.jsdelivr.net/gh/makesmebad/avatarrepublic@main/$file"
+              done
