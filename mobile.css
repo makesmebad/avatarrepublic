@@ -1050,7 +1050,7 @@
     }
 
     #pun-navlinks li#navlogout a:before {
-      content:"\f2f5 ";
+      content:"\f08b ";
       font-family:var(--fa);
       font-weight:900;
       text-transform:none;
@@ -1064,7 +1064,7 @@
     }
 
     #pun-navlinks li#navlogin a:before {
-      content:"\f2f6 ";
+      content:"\f090 ";
       font-family:var(--fa);
       font-weight:900;
       text-transform:none;
@@ -1098,7 +1098,7 @@
     }
 
     #pun-navlinks li#navadmin a:before {
-      content:"\f505 ";
+      content:"\f21b ";
       font-family:var(--fa);
       font-weight:900;
       text-transform:none;
@@ -1112,7 +1112,7 @@
     }
 
     #pun-navlinks li#navrules a:before {
-      content:"\f46c ";
+      content:"\f187 ";
       font-family:var(--fa);
       font-weight:900;
       text-transform:none;
@@ -3920,15 +3920,15 @@
   }
 
   #pun #pun-navlinks #navadmin>a::before {
-    content:"\f505 "!important;
+    content:"\f21b "!important;
   }
 
   #pun #pun-navlinks #navlogout>a::before {
-    content:"\f2f5 "!important;
+    content:"\f08b "!important;
   }
 
   #pun #pun-navlinks #navlogin>a::before {
-    content:"\f2f6 "!important;
+    content:"\f090 "!important;
   }
 
   #pun #pun-navlinks #navregister>a::before {
@@ -4654,7 +4654,7 @@
   }
 
   #pun #pun-ulinks #h-replies>a::before {
-    content:"\f3e5 "!important;
+    content:"\f112 "!important;
   }
 
   #pun #pun-ulinks #h-unanswered>a::before {
@@ -4662,7 +4662,7 @@
   }
 
   #pun #pun-ulinks #h-myposts>a::before {
-    content:"\f303 "!important;
+    content:"\f040 "!important;
   }
 
   #pun #pun-ulinks #h-uploads>a::before {
@@ -4674,11 +4674,11 @@
   }
 
   #pun #pun-ulinks #li_episodes>a::before {
-    content:"\f518 "!important;
+    content:"\f02d "!important;
   }
 
   #pun #pun-ulinks #h-markread>a::before {
-    content:"\f560 "!important;
+    content:"\f06e "!important;
   }
 
   #pun #pun-ulinks.section>ul.container,#pun #pun-ulinks.section:hover>ul.container {
@@ -9064,7 +9064,7 @@
   }
 
   #pun#pun :is(#pun-messages,#profile.messages-container) .post-links .pl-reply>a::before {
-    content:"\f3e5 "!important;
+    content:"\f112 "!important;
   }
 
   #pun#pun :is(#pun-messages,#profile.messages-container) .post-links .pl-delete>a::before {
@@ -13143,15 +13143,15 @@
   }
 
   #pun-navlinks #navadmin a::before {
-    content:"\f505 ";
+    content:"\f21b ";
   }
 
   #pun-navlinks #navlogout a::before {
-    content:"\f2f5 ";
+    content:"\f08b ";
   }
 
   #pun-navlinks #navlogin a::before {
-    content:"\f2f6 ";
+    content:"\f090 ";
   }
 
   #pun-navlinks #navregister a::before {
@@ -14003,7 +14003,7 @@
   }
 
   #pun #pun-viewtopic .postlink a::before {
-    content:"\f3e5 ";
+    content:"\f112 ";
     font:900 20px/1 var(--fa);
     text-transform:none;
   }
@@ -14961,7 +14961,7 @@
   }
 
   #pun #viewprofile #pa-edit a::before {
-    content:"\f303 ";
+    content:"\f040 ";
     font:900 18px/1 var(--fa);
     text-transform:none;
   }
@@ -15208,7 +15208,7 @@
   }
 
   #pun #profile #profilenav .item5 a::before {
-    content:"\f303 ";
+    content:"\f040 ";
   }
 
   #pun #profile #profilenav .item6 a::before {
@@ -15232,7 +15232,7 @@
   }
 
   #pun #profile #profilenav .item11 a::before {
-    content:"\f505 ";
+    content:"\f21b ";
   }
 
   #pun #profile>.container>fieldset {
@@ -15595,7 +15595,7 @@
   }
 
   #pun #profile.messages-container #profilenav a[href*="action=new"]::before {
-    content:"\f303 ";
+    content:"\f040 ";
   }
 
   #pun #profile.messages-container #profilenav a[href*="box=2"]::before {
@@ -15603,7 +15603,7 @@
   }
 
   #pun #profile.messages-container #profilenav a[href*="markread"]::before {
-    content:"\f560 ";
+    content:"\f06e ";
   }
 
   #pun #profile.messages-container #profilenav a[href*="clean"]::before {
@@ -16247,7 +16247,7 @@
   }
 
   #pun .adformal table.page-list a[href*="edit_page="]::before {
-    content:"\f303 ";
+    content:"\f040 ";
     font:900 16px/1 var(--fa);
   }
 
@@ -16393,7 +16393,7 @@
   }
 
   #pun #pun-main>#administration>h1::before {
-    content:"\f505 ";
+    content:"\f21b ";
   }
 
   #pun #pun-main>#most_connected>h1::before {
@@ -16873,7 +16873,7 @@
   }
 
   #pun #adnav-standard>ul>.item7>a::before {
-    content:"\f3ed ";
+    content:"\f132 ";
   }
 
   #pun #adnav-standard>ul>.item5>a::before {
@@ -16889,7 +16889,7 @@
   }
 
   #pun #adnav-standard>ul>.item9>a::before {
-    content:"\f5a2 ";
+    content:"\f219 ";
   }
 
   #pun #adnav-standard>ul>.item10>a::before {
@@ -16897,11 +16897,11 @@
   }
 
   #pun #adnav-standard>ul>.item12>a::before {
-    content:"\f51a ";
+    content:"\f108 ";
   }
 
   #pun #adnav-standard>ul>.item15>a::before {
-    content:"\f53f ";
+    content:"\f1fc ";
   }
 
   #pun #adnav-standard>ul>.item20>a::before {
@@ -17378,7 +17378,7 @@
   }
 
   #pun #pun-viewtopic .post-links .pl-edit a::before {
-    content:"\f303 ";
+    content:"\f040 ";
   }
 
   #pun #pun-viewtopic .post-links .pl-quote a::before {
@@ -17584,7 +17584,7 @@
   }
 
   #pun #button-spoiler {
-    --editor-icon:'\f338';
+    --editor-icon:'\f0ec';
   }
 
   #pun #button-image {
@@ -17608,7 +17608,7 @@
   }
 
   #pun #button-color {
-    --editor-icon:'\f53f';
+    --editor-icon:'\f1fc';
   }
 
   #pun #button-table {
@@ -17732,7 +17732,7 @@
   }
 
   #pun #topic-modmenu strong::before {
-    content:"\f505 ";
+    content:"\f21b ";
     font:900 23px/1 var(--fa);
   }
 
@@ -17980,12 +17980,12 @@
     }
 
     #pun #topic-modmenu #mod-options option::before {
-      content:var(--mod-icon,'\f362');
+      content:var(--mod-icon,'\f0ec');
       font:900 18px/1 var(--fa);
     }
 
     #pun #mod-options option[value=""] {
-      --mod-icon:'\f505';
+      --mod-icon:'\f21b';
     }
 
     #pun #mod-options option[value*="move_topics"] {
@@ -18009,7 +18009,7 @@
     }
 
     #pun #mod-options option[value*="mode=move"] {
-      --mod-icon:'\f362';
+      --mod-icon:'\f0ec';
     }
 
     #pun #mod-options option[value*="mode=merge"] {
@@ -18139,11 +18139,11 @@
   }
 
   #pun #vip-advance-stealth {
-    --vip-icon:'\f3ed';
+    --vip-icon:'\f132';
   }
 
   #pun #vip-advance-multi {
-    --vip-icon:'\f507';
+    --vip-icon:'\f007';
   }
 
   #pun #vip-tariffs {
@@ -18417,11 +18417,11 @@
     }
 
     #pun select[name="show_group"] option[value="1"]::before {
-      content:"\f505 ";
+      content:"\f21b ";
     }
 
     #pun select[name="show_group"] option[value="2"]::before {
-      content:"\f3ed ";
+      content:"\f132 ";
     }
 
     #pun select[name="show_group"] option[value="4"]::before {
@@ -18433,7 +18433,7 @@
     }
 
     #pun select[name="sort_by"] option[value="registered"]::before {
-      content:"\f4fc ";
+      content:"\f234 ";
     }
 
     #pun select[name="sort_by"] option[value="last_visit"]::before {
@@ -18648,12 +18648,12 @@
   }
 
   #pun #pun-status .status-right a[href="/vip.php"]::before {
-    content:"\f5a2 ";
+    content:"\f219 ";
     font:900 17px/1 var(--fa);
   }
 
   #pun #pun-status .status-right a[href="/foundation.php"]::before {
-    content:"\f4be ";
+    content:"\f0d6 ";
     font:900 17px/1 var(--fa);
   }
 
@@ -19326,7 +19326,7 @@
   }
 
   #pun #filetable .tag-edit .icons-pencil::before {
-    content:"\f303 ";
+    content:"\f040 ";
     font:900 16px/1 var(--fa);
   }
 
@@ -19485,7 +19485,7 @@
   }
 
   #pun #pun-viewtopic .formal:has(#main-reply)>h2::before,#pun #pun-viewtopic #post-form>h2::before {
-    content:"\f3e5 ";
+    content:"\f112 ";
     font:900 23px/1 var(--fa);
   }
 
@@ -20482,7 +20482,7 @@
   }
 
   #pun .forum .newtext>a::before {
-    content:"\f4ad ";
+    content:"\f27a ";
     font:900 15px/1 var(--fa);
     flex:0 0 auto;
   }
@@ -20854,7 +20854,7 @@
   }
 
   #pun-redirect .main-title::before {
-    content:"\f35d ";
+    content:"\f08e ";
     display:flex;
     align-items:center;
     justify-content:center;
@@ -22608,7 +22608,7 @@
   }
 
   #pun :is(#pun-viewforum,#pun-searchtopics) .forum tbody td.tc3::before {
-    content:"\f303 "!important;
+    content:"\f040 "!important;
     display:inline-block!important;
     font:900 14px/1 var(--fa)!important;
     text-transform:none!important;
@@ -22905,7 +22905,7 @@
   }
 
   .world-drawer-rail a[href*="page=plot"] [class*="symbols-outlined"]::before {
-    content:"\f518 ";
+    content:"\f02d ";
   }
 
   .world-drawer-rail a[href*="page=timeline"] [class*="symbols-outlined"]::before {
@@ -22917,7 +22917,7 @@
   }
 
   .world-drawer-rail a[href*="page=factions"] [class*="symbols-outlined"]::before {
-    content:"\f3ed ";
+    content:"\f132 ";
   }
 
   .world-drawer-rail a[href*="page=characters"] [class*="symbols-outlined"]::before {
@@ -22995,15 +22995,15 @@
   }
 
   #pun #pun-navlinks #navadmin a::before {
-    content:"\f505 "!important;
+    content:"\f21b "!important;
   }
 
   #pun #pun-navlinks #navlogout a::before {
-    content:"\f2f5 "!important;
+    content:"\f08b "!important;
   }
 
   #pun #pun-navlinks #navlogin a::before {
-    content:"\f2f6 "!important;
+    content:"\f090 "!important;
   }
 
   #pun #pun-navlinks #navregister a::before {
@@ -23019,7 +23019,7 @@
   }
 
   #pun #pun-ulinks.section #h-replies a::before {
-    content:"\f3e5 "!important;
+    content:"\f112 "!important;
   }
 
   #pun #pun-ulinks.section #h-unanswered a::before {
@@ -23027,7 +23027,7 @@
   }
 
   #pun #pun-ulinks.section #h-myposts a::before {
-    content:"\f303 "!important;
+    content:"\f040 "!important;
   }
 
   #pun #pun-ulinks.section #h-uploads a::before {
@@ -23039,11 +23039,11 @@
   }
 
   #pun #pun-ulinks.section #li_episodes a::before {
-    content:"\f518 "!important;
+    content:"\f02d "!important;
   }
 
   #pun #pun-ulinks.section #h-markread a::before {
-    content:"\f560 "!important;
+    content:"\f06e "!important;
   }
 
   #pun #forum-header-layout .header-staff-card .header-staff-overlay {
@@ -23148,7 +23148,7 @@
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-spoiler::before {
-    content:"\f518 "!important;
+    content:"\f02d "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-image::before {
@@ -23172,7 +23172,7 @@
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-color::before {
-    content:"\f53f "!important;
+    content:"\f1fc "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-table::before {
@@ -23196,7 +23196,7 @@
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-graffiti_rusff::before {
-    content:"\f53f "!important;
+    content:"\f1fc "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-sp-vote::before {
@@ -23224,19 +23224,19 @@
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-sticker::before {
-    content:"\f598 "!important;
+    content:"\f118 "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-dice::before {
-    content:"\f6cf "!important;
+    content:"\f1b2 "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-mask::before {
-    content:"\f630 "!important;
+    content:"\f21b "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#button-hide:hover::before {
-    content:"\f3c1 "!important;
+    content:"\f09c "!important;
   }
 
   #pun fieldset:has(#main-reply) #form-buttons td#floatbut::before {
@@ -23272,13 +23272,13 @@
   }
 
   #pun #pun-navlinks #navpr_2 a::before {
-    content:"\f518 "!important;
+    content:"\f02d "!important;
     font-family:var(--fa)!important;
     font-weight:900!important;
   }
 
   #pun #pun-userlist .username .user-avatar.no-avatar .avatar-image::after {
-    content:"\f6e8 "!important;
+    content:"\f071 "!important;
   }
 
   #pun #pun-admin_files #filetable td.ft-tags,#pun #filetable td.ft-tags {
@@ -23328,7 +23328,7 @@
   }
 
   #pun #pun-main.show_user_posts .post-author .pa-author::before {
-    content:"\f6e8 "!important;
+    content:"\f071 "!important;
   }
 
   #pun .statscon :is(.users_24h,.onlinelist)>div>a:first-child::before,#pun #pun-stats .statscon ul.container>li:is(.item1,.item2,.item3,.item4)::before,#pun #pun-ulinks.section a::before,#pun #topic-modmenu strong::before,#pun .online-list td.username::before {
