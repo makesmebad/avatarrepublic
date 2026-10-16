@@ -147,7 +147,7 @@
   --palette-tan:#E5C193;
 }
 
-[data-theme="dark"]:root {
+:root:is([data-theme="dark"], .dark) {
   --medium-orange:rgba(241,82,0,.3);
   --teal:#7E75F6;
   --light-teal:rgba(141,122,229,.1);
@@ -174,7 +174,7 @@
   --image-forum-desc:url(https://forumstatic.ru/files/001c/25/f9/57122.webp?v=1);
 }
 
-@media (min-width:801px) {
+@media (width > 800px) {
   html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,h7,h8,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     border:0;
   }
@@ -1024,7 +1024,7 @@
     border-color:var(--main-border-color)!important;
   }
 
-  [data-theme="dark"]:root {
+  :root:is([data-theme="dark"], .dark) {
 
   }
 
@@ -6637,17 +6637,6 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     background:transparent!important;
   }
 
-  @keyframes header-title-enter {
-    from {
-      opacity:0;
-      filter:blur(4px);
-    }
-
-    to {
-      opacity:1;
-      filter:blur(0);
-    }
-  }
 
   body:has(#pun-adnav) .modal-bg {
     background:var(--color-rgba-0-0-0-55)!important;
@@ -6737,17 +6726,6 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     text-shadow:none!important;
   }
 
-  @keyframes forum-online-pulse {
-    0%,100% {
-      opacity:1;
-      box-shadow:0 0 0 2px var(--light-teal);
-    }
-
-    50% {
-      opacity:.4;
-      box-shadow:0 0 0 4px transparent;
-    }
-  }
 
   #pun #pun-stats .statscon>ul.container>li.stats-summary {
     background:none!important;
@@ -7742,7 +7720,7 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     border-color:var(--main-border-color)!important;
   }
 
-  [data-theme="dark"]:root {
+  :root:is([data-theme="dark"], .dark) {
 
   }
 
@@ -12242,7 +12220,7 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
   }
 }
 
-@media (min-width:801px) {
+@media (width > 800px) {
   #pun#pun #pun-stats .statscon>ul.container>li.stats-summary {
     background:none!important;
     border:0!important;

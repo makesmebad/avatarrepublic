@@ -2163,14 +2163,6 @@
   }
 
   @media (max-width:420px) {
-    #pun #viewprofile #profile-right {
-      grid-template-columns:minmax(0,1fr)!important;
-    }
-
-    #pun #viewprofile #profile-right>li {
-      grid-column:1!important;
-    }
-
     #pun #viewprofile #profile-right>li>strong {
       font-size:14px!important;
     }
@@ -2570,26 +2562,6 @@
 
   #pun #pun-viewtopic .post-links a {
     font-size:11px!important;
-  }
-
-  @media (max-width:500px) {
-    #pun #pun-viewtopic .post-links>ul {
-      display:grid!important;
-      grid-template-columns:repeat(3,minmax(0,1fr))!important;
-      gap:var(--space-6px)!important;
-    }
-
-    #pun #pun-viewtopic .post-links li {
-      margin:0!important;
-      width:100%;
-    }
-
-    #pun #pun-viewtopic .post-links a {
-      width:100%;
-      flex-wrap:wrap;
-      gap:var(--space-4px);
-      font-size:10px!important;
-    }
   }
 
   @media (max-width:600px) {
@@ -3606,7 +3578,6 @@
     column-gap:8px!important;
   }
 
-  
 
   #pun #pun-index .category tbody>tr>td.tcr {
     min-width:0!important;
@@ -7805,46 +7776,6 @@
     margin:0!important;
   }
 
-  @keyframes header-firefly-flight {
-    0%,100% {
-      transform:translate3d(var(--fly-x1, 0px), var(--fly-y1, 0px), 0);
-      opacity:.65;
-    }
-
-    33% {
-      transform:translate3d(var(--fly-x2, 0px), var(--fly-y2, 0px), 0);
-      opacity:1;
-    }
-
-    66% {
-      transform:translate3d(var(--fly-x3, 0px), var(--fly-y3, 0px), 0);
-      opacity:.8;
-    }
-  }
-
-  @keyframes header-content-enter {
-    from {
-      opacity:0;
-      transform:translateY(10px);
-    }
-
-    to {
-      opacity:1;
-      transform:translateY(0);
-    }
-  }
-
-  @keyframes header-content-exit {
-    from {
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    to {
-      opacity:0;
-      transform:translateY(6px);
-    }
-  }
 
   #pun #pun-viewtopic #pun-main .post-author :is(.pa-posts,.pa-respect) {
     grid-column:auto!important;
@@ -9277,6 +9208,12 @@
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
     grid-auto-flow:row!important;
     gap:8px!important;
+  }
+
+  @media (max-width:420px) {
+    #pun#pun#pun #viewprofile #profile-right {
+      grid-template-columns:minmax(0,1fr)!important;
+    }
   }
 
   #pun#pun#pun #viewprofile #profile-right>li {
@@ -17452,6 +17389,26 @@
     outline-offset:3px;
   }
 
+  @media (max-width:500px) {
+    #pun #pun-viewtopic .post h3+.container>.post-links>ul {
+      display:grid!important;
+      grid-template-columns:repeat(3,minmax(0,1fr))!important;
+      gap:var(--space-6px)!important;
+    }
+
+    #pun #pun-viewtopic .post h3+.container>.post-links li {
+      margin:0!important;
+      width:100%;
+    }
+
+    #pun #pun-viewtopic .post h3+.container>.post-links a {
+      width:100%;
+      flex-wrap:wrap;
+      gap:var(--space-4px);
+      font-size:10px!important;
+    }
+  }
+
   @media (max-height:650px) {
     #pun #pun-viewtopic .post-author>ul {
       position:static!important;
@@ -20535,7 +20492,6 @@
   }
 
   :root {
-    --forum-padding-density: 0.85;
     --online-list-gap:10px;
     --online-row-padding:calc(14px * var(--forum-padding-density));
     --online-row-radius:14px;
@@ -21954,10 +21910,6 @@
   }
 
   #forum-header-layout .header-interactive:not(.header-expanded)>:is(.header-content,.header-aside) {
-    display:none!important;
-  }
-
-  #pun #forum-header-layout .header-interactive:not(.header-expanded)>#pun-navlinks {
     display:none!important;
   }
 
@@ -24817,7 +24769,7 @@
     transform: none !important;
     animation: none !important;
   }
-  #pun#pun#pun #forum-header-layout .forum-header:not(.header-expanded) > :is(.header-content, .header-aside, .header-panel-scroll, .header-navigation) {
+  #pun#pun#pun #forum-header-layout .forum-header:not(.header-expanded) > :is(.header-content, .header-aside, .header-panel-scroll) {
     display: none !important;
   }
   #pun#pun#pun #forum-header-layout .header-expanded > .header-title-toggle > span {
@@ -24836,7 +24788,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     grid-template-rows: none !important;
     grid-auto-rows: auto !important;
-    grid-template-areas: "person person" "role role" "registered visit" "respect posts" !important;
+    grid-template-areas: "person person" "role role" "posts respect" "visit registered" !important;
     gap: 8px !important;
   }
   #pun#pun #pun-userlist#pun-userlist #pun-main table:has(td.username) > tbody > tr > td:is(.registered, .last_visit, .relation, .num_posts) {
@@ -24875,28 +24827,6 @@
   }
 }
 
-
-@media (max-width: 800px) {
-  #pun#pun #pun-userlist#pun-userlist #pun-main
-  table:has(td.username) > tbody > tr > td.num_posts {
-    grid-area: 3 / 1 / 4 / 2 !important;
-  }
-
-  #pun#pun #pun-userlist#pun-userlist #pun-main
-  table:has(td.username) > tbody > tr > td.relation {
-    grid-area: 3 / 2 / 4 / 3 !important;
-  }
-
-  #pun#pun #pun-userlist#pun-userlist #pun-main
-  table:has(td.username) > tbody > tr > td.last_visit {
-    grid-area: 4 / 1 / 5 / 2 !important;
-  }
-
-  #pun#pun #pun-userlist#pun-userlist #pun-main
-  table:has(td.username) > tbody > tr > td.registered {
-    grid-area: 4 / 2 / 5 / 3 !important;
-  }
-}
 
 @media (max-width: 800px) {
   #pun#pun #pun-userlist#pun-userlist #pun-main
