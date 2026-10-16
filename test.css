@@ -12256,20 +12256,3 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
   }
 }
 
-/* Shared header artwork for desktop and mobile. */
-:root {
-  --image-forum-header:url("https://forumstatic.ru/files/001c/25/f9/42433.webp?v=1");
-}
-html[data-theme="dark"], html.dark {
-  --image-forum-header:url("https://forumstatic.ru/files/001c/25/f9/47523.webp?v=1");
-}
-@media (max-width:800px) {
-  #pun#pun #forum-header-layout .forum-header {
-    background-color:var(--white);
-    --header-mobile-veil:color-mix(in srgb, var(--white) 35%, transparent);
-    background-image:linear-gradient(var(--header-mobile-veil), var(--header-mobile-veil)), var(--image-forum-header) !important;
-    background-size:100% 100%, cover !important;
-    background-position:center top !important;
-    background-repeat:no-repeat !important;
-  }
-}
