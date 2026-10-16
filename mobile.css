@@ -24610,3 +24610,10 @@
     padding-bottom: 5px !important;
   }
 }
+
+/* Mobile pages use the theme palette instead of the large body artwork. */
+@media (max-width:800px) {
+  body {
+    background:var(--pale-green) !important;
+  }
+}
