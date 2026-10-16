@@ -24613,7 +24613,8 @@
 
 /* Mobile pages use the theme palette instead of the large body artwork. */
 @media (max-width:800px) {
-  body {
+  html:not([data-theme="dark"]):not(.dark) body,
+  html:is([data-theme="dark"],.dark) body {
     background:var(--pale-green) !important;
   }
 }
