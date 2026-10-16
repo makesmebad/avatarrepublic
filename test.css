@@ -12107,3 +12107,8 @@ html[data-theme="dark"], html.dark {
   -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%279%27%2F%3E%3Cpath%20d%3D%27M8%2014a4%204%200%200%200%208%200%27%2F%3E%3Ccircle%20cx%3D%279%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
   mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%279%27%2F%3E%3Cpath%20d%3D%27M8%2014a4%204%200%200%200%208%200%27%2F%3E%3Ccircle%20cx%3D%279%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
 }
+
+/* The decorative line and icon replace the legacy signature separator. */
+#pun .post-sig > dt {
+  display:none;
+}
