@@ -1,2 +1,0 @@
-# avatarrepublic
-Avatar Republic City
