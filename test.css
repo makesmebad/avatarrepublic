@@ -12064,3 +12064,46 @@ html[data-theme="dark"], html.dark {
 /* purge test */
 /* purge test */
 /* purge test */
+
+/* Shared reaction controls: equal-height chips and a font-independent smile icon. */
+#pun .post-body .reactions-container {
+  align-items:stretch;
+}
+
+#pun .post-body .reactions-container .reaction-chip {
+  box-sizing:border-box;
+}
+
+#pun .post-body .reactions-container > .reaction-picker {
+  display:inline-flex;
+  align-self:stretch;
+  align-items:stretch;
+}
+
+#pun .post-body .reaction-picker > .reaction-picker-button.reaction-chip {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 28px;
+  width:28px;
+  height:auto;
+  min-height:0;
+  margin:0;
+  padding:2px;
+  color:var(--slate-blue, #465f6e);
+}
+
+#pun .post-body .reaction-picker-button > svg {
+  display:none;
+}
+
+#pun .post-body .reaction-picker-button::before {
+  content:"";
+  display:block;
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+  background-color:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%279%27%2F%3E%3Cpath%20d%3D%27M8%2014a4%204%200%200%200%208%200%27%2F%3E%3Ccircle%20cx%3D%279%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%279%27%2F%3E%3Cpath%20d%3D%27M8%2014a4%204%200%200%200%208%200%27%2F%3E%3Ccircle%20cx%3D%279%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3Ccircle%20cx%3D%2715%27%20cy%3D%279%27%20r%3D%27.8%27%20fill%3D%27black%27%20stroke%3D%27none%27%2F%3E%3C%2Fsvg%3E") center / contain no-repeat;
+}
