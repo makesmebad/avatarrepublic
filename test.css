@@ -1,4 +1,4 @@
 /* Codex / GitHub test */
-#pun {
-    --github-test: 1;
+body {
+    outline: 5px solid red !important;
 }
