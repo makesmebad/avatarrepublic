@@ -12714,6 +12714,7 @@ html body .hvStickerPackModalContainer .hvStickerPackModalTabs {
   color:var(--primary-text)!important;
 }
 html body .hvStickerPackModalContainer .hvStickerPackModalTab {
+  margin:4px!important;
   border-radius:8px!important;
   background-color:transparent!important;
   border-color:transparent!important;
