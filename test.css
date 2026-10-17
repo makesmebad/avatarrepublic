@@ -13099,3 +13099,24 @@ html body td[id="button-graffiti_rusff"],
   right:8px!important;
   bottom:8px!important;
 }
+
+/* Keep decorative quotes clear of spoiler text as well. */
+#pun#pun .post-content .spoiler-box>blockquote {
+  padding:16px 32px!important;
+}
+#pun#pun .post-content .spoiler-box>blockquote::before,
+#pun#pun .post-content .spoiler-box>blockquote::after {
+  width:14px!important;
+  height:14px!important;
+  font-size:14px!important;
+  line-height:1!important;
+  pointer-events:none;
+}
+#pun#pun .post-content .spoiler-box>blockquote::before {
+  left:8px!important;
+  top:8px!important;
+}
+#pun#pun .post-content .spoiler-box>blockquote::after {
+  right:8px!important;
+  bottom:8px!important;
+}
