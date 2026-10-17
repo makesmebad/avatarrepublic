@@ -25066,3 +25066,9 @@
     translate:0 4px;
   }
 }
+
+@media (max-width:800px) {
+  #pun #pun-searchtopics #pun-main.main .forum tbody>tr::before {
+    translate:0 4px;
+  }
+}
