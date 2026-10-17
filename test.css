@@ -2732,6 +2732,17 @@
     color:var(--teal);
   }
 
+  #pun .post-content .quote-box>blockquote::before {
+    width:10px!important;
+    height:10px!important;
+    font:900 10px/1 var(--fa)!important;
+    left:8px!important;
+    top:7px!important;
+  }
+  #pun .post-content :is(.quote-box,.spoiler-box)>blockquote {
+    padding:28px 32px 16px!important;
+  }
+
   #pun .post-content .quote-box .quote-box {
     box-shadow:none;
   }
@@ -9296,6 +9307,17 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
 
   #pun .post-content .quote-box>blockquote::before,#pun .post-content .quote-box>blockquote::after {
     color:var(--teal);
+  }
+
+  #pun .post-content .quote-box>blockquote::before {
+    width:10px!important;
+    height:10px!important;
+    font:900 10px/1 var(--fa)!important;
+    left:8px!important;
+    top:7px!important;
+  }
+  #pun .post-content :is(.quote-box,.spoiler-box)>blockquote {
+    padding:28px 32px 16px!important;
   }
 
   #pun .post-content .quote-box .quote-box {
