@@ -25118,13 +25118,21 @@ html body td[id="button-graffiti_rusff"],
   display:none!important;
 }
 
-/* Distinguish the sticker picker from the standard MyBB smiley button. */
+/* Font Awesome face-grin-beam for the sticker picker only. */
+@font-face {
+  font-family:"Forum Sticker Icons";
+  src:url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-solid-900.woff2") format("woff2");
+  font-style:normal;
+  font-weight:900;
+  font-display:swap;
+}
 #pun#pun #form-buttons #button-sticker {
   background-image:none!important;
 }
 #pun#pun #form-buttons #button-sticker::before {
-  content:"\1F604"!important;
-  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif!important;
+  content:"\f582"!important;
+  font-family:"Forum Sticker Icons"!important;
   font-size:16px!important;
-  font-weight:normal!important;
+  font-style:normal!important;
+  font-weight:900!important;
 }
