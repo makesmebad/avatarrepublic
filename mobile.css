@@ -25358,3 +25358,10 @@ html body td[id="button-graffiti_rusff"],
 #pun#pun #pun-modviewforum #pun-main .forum .byuser a {
   text-transform:none!important;
 }
+
+/* Use a settings cog for the administration navigation link. */
+#pun#pun #pun-navlinks #navadmin>a::before {
+  content:"\f013"!important;
+  font-family:var(--fa,"FontAwesome")!important;
+  font-style:normal!important;
+}
