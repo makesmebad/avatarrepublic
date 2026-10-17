@@ -12737,7 +12737,7 @@ html body .hvStickerPackModalContainer .hvStickerPackItem {
 /* Fill the available picker width with compact sticker cells. */
 html body .hvStickerPackModalContainer .hvStickerPackModalContent:not(.hvStickerPackModalBulk):not(.hidden) {
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(48px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(58px,1fr));
   gap:4px!important;
   align-content:start;
 }
