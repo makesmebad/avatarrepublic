@@ -8371,9 +8371,9 @@
   }
 
   #pun .post-content .quote-box>blockquote::before,#pun .post-content .quote-box>blockquote::after {
-    font-size:18px!important;
-    width:18px!important;
-    height:18px!important;
+    font-size:15px!important;
+    width:15px!important;
+    height:15px!important;
   }
 
   #pun #pun-searchposts .post-content iframe {
@@ -16928,17 +16928,17 @@
     content:"\f10e ";
     position:absolute;
     display:block;
-    width:22px;
-    height:22px;
-    font:900 22px/1 var(--fa);
+    width:15px;
+    height:15px;
+    font:900 15px/1 var(--fa);
     opacity:.65;
     pointer-events:none;
   }
 
   #pun .post-content .quote-box>blockquote::before {
-    width:10px!important;
-    height:10px!important;
-    font:900 10px/1 var(--fa)!important;
+    width:15px!important;
+    height:15px!important;
+    font:900 15px/1 var(--fa)!important;
     left:8px!important;
     top:7px!important;
     transform:rotate(180deg);
@@ -23301,9 +23301,9 @@
   }
 
   #pun .post-content .quote-box>blockquote::before {
-    width:10px!important;
-    height:10px!important;
-    font:900 10px/1 var(--fa)!important;
+    width:15px!important;
+    height:15px!important;
+    font:900 15px/1 var(--fa)!important;
     left:8px!important;
     top:7px!important;
     transform:rotate(180deg)!important;
@@ -25378,9 +25378,9 @@ html body td[id="button-graffiti_rusff"],
 }
 #pun#pun .post-content .quote-box>blockquote::before,
 #pun#pun .post-content .quote-box>blockquote::after {
-  width:14px!important;
-  height:14px!important;
-  font-size:14px!important;
+  width:15px!important;
+  height:15px!important;
+  font-size:15px!important;
   line-height:1!important;
   pointer-events:none;
 }
@@ -25399,9 +25399,9 @@ html body td[id="button-graffiti_rusff"],
 }
 #pun#pun .post-content .spoiler-box>blockquote::before,
 #pun#pun .post-content .spoiler-box>blockquote::after {
-  width:14px!important;
-  height:14px!important;
-  font-size:14px!important;
+  width:15px!important;
+  height:15px!important;
+  font-size:15px!important;
   line-height:1!important;
   pointer-events:none;
 }
@@ -25414,14 +25414,14 @@ html body td[id="button-graffiti_rusff"],
   bottom:8px!important;
 }
 
-/* Give only the opening quotation mark more space above the text. */
+/* Keep opening quote marks separated from the text. */
 #pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote {
   padding-top:28px!important;
 }
 #pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote::before {
-  width:10px!important;
-  height:10px!important;
-  font-size:10px!important;
+  width:15px!important;
+  height:15px!important;
+  font-size:15px!important;
   line-height:1!important;
   top:7px!important;
   left:8px!important;
