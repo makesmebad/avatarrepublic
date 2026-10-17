@@ -24977,3 +24977,10 @@
     white-space:nowrap;
   }
 }
+
+/* Reduce the mobile sticker menu height by trimming its bottom spacing. */
+@media (max-width:800px) {
+  html body .hvStickerPackModalContainer .hvStickerPackModalTab {
+    margin-bottom:1px!important;
+  }
+}
