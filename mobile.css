@@ -25273,3 +25273,12 @@ html body td[id="button-graffiti_rusff"],
   #pun#pun #pun-modviewforum #pun-main .modmenu strong { flex-basis:100%!important; }
   #pun#pun #pun-modviewforum #pun-main .modmenu input[type="submit"] { flex:1 1 120px!important; min-width:0!important; }
 }
+
+/* Give the last-post avatar breathing room and keep the author compact. */
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar {
+  margin-inline-end:8px!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr :is(.byuser,.byuser-username) {
+  font-size:12px!important;
+  line-height:1.4!important;
+}
