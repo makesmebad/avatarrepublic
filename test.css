@@ -12817,3 +12817,10 @@ html body .hvStickerPackModalContainer .hvStickerPackItem>img {
 #pun#pun .post-links li.pl-reports {
   display:none!important;
 }
+
+/* Rusff may insert these controls outside the standard editor toolbar. */
+html body td[id="button-files_rusff"],
+html body td[id="button-graffiti_rusff"],
+#pun#pun#pun :is(#button-files_rusff,#button-graffiti_rusff) {
+  display:none!important;
+}
