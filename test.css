@@ -13120,3 +13120,16 @@ html body td[id="button-graffiti_rusff"],
   right:8px!important;
   bottom:8px!important;
 }
+
+/* Give only the opening quotation mark more space above the text. */
+#pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote {
+  padding-top:28px!important;
+}
+#pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote::before {
+  width:10px!important;
+  height:10px!important;
+  font-size:10px!important;
+  line-height:1!important;
+  top:7px!important;
+  left:8px!important;
+}
