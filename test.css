@@ -13069,3 +13069,12 @@ html body td[id="button-graffiti_rusff"],
     font-weight:normal!important;
   }
 }
+
+/* Join desktop search result headers cleanly to their post cards. */
+@media (min-width:801px) {
+  #pun#pun #pun-searchposts #pun-main .post>h3,
+  #pun#pun #pun-searchposts #pun-main .post>h3>span {
+    border-bottom-left-radius:0!important;
+    border-bottom-right-radius:0!important;
+  }
+}
