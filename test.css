@@ -12732,3 +12732,16 @@ html body .hvStickerPackModalContainer .hvStickerPackModalTab.active {
 html body .hvStickerPackModalContainer .hvStickerPackItem {
   border-radius:10px!important;
 }
+
+/* Fill the available picker width with compact sticker cells. */
+html body .hvStickerPackModalContainer .hvStickerPackModalContent:not(.hvStickerPackModalBulk):not(.hidden) {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(48px,1fr));
+  gap:4px!important;
+  align-content:start;
+}
+html body .hvStickerPackModalContainer .hvStickerPackItem {
+  width:auto!important;
+  min-width:0;
+  margin:0!important;
+}
