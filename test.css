@@ -12845,3 +12845,19 @@ html body td[id="button-graffiti_rusff"],
   font-style:normal!important;
   font-weight:900!important;
 }
+
+/* Match reply-button hover to the post edit action. */
+#pun#pun .postlink a[href*="post.php?tid="] {
+  color:var(--white)!important;
+  background:var(--midnight-gradient),linear-gradient(var(--teal),var(--teal))!important;
+  background-size:100% 100%,100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-position:0 0,0 0!important;
+  background-origin:border-box!important;
+  background-clip:border-box!important;
+  transition:background-size .3s ease,color .3s ease!important;
+}
+#pun#pun .postlink a[href*="post.php?tid="]:hover {
+  background-size:0 100%,100% 100%!important;
+  color:var(--white)!important;
+}
