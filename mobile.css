@@ -25060,3 +25060,9 @@
     border-radius:4px!important;
   }
 }
+
+@media (max-width:800px) {
+  #pun #pun-viewforum #pun-main.main .forum tbody>tr::before {
+    translate:0 4px;
+  }
+}
