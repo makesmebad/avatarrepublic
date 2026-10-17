@@ -24957,8 +24957,8 @@
     white-space:nowrap;
   }
   #pun #pun-status>p.container>.item3 a[href*="foundation"]::before {
-    content:"🪙"!important;
-    font:14px/1.2 sans-serif!important;
+    content:"\f0d6"!important;
+    font:normal 14px/1.2 var(--fa, 'Font Awesome')!important;
   }
   #pun #pun-status>p.container>.item3 a[href*="foundation"]::after {
     content:"Помочь";
