@@ -17646,7 +17646,7 @@
   }
 
   #pun fieldset:has(#main-reply) #tags>#smilies-area {
-    width:var(--editor-smilies-width)!important;
+    width:100%!important;
     max-width:100%!important;
     left:auto!important;
     right:0!important;
@@ -24981,6 +24981,6 @@
 /* Reduce the mobile sticker menu height by trimming its bottom spacing. */
 @media (max-width:800px) {
   html body .hvStickerPackModalContainer .hvStickerPackModalTab {
-    margin-bottom:1px!important;
+    margin-bottom:0!important;
   }
 }
