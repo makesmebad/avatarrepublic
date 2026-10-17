@@ -12754,3 +12754,14 @@ html body .hvStickerPackModalContainer .hvStickerPackItem>img {
   max-height:47px!important;
   object-fit:contain;
 }
+
+/* Collapsing a category must not change the intrinsic width of the index. */
+@media (min-width:801px) {
+  #pun #pun-index,
+  #pun #pun-index #pun-main {
+    width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box;
+    align-self:stretch;
+  }
+}
