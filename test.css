@@ -12706,7 +12706,7 @@ html body .hvStickerPackModalContainer :is(.hvStickerPackModalContent,.hvSticker
   border-color:var(--main-border-color,var(--sage-green))!important;
 }
 html body .hvStickerPackModalContainer .hvStickerPackModalTabs {
-  padding-block:4px!important;
+  margin-block:4px!important;
   border-radius:12px!important;
   box-shadow:inset 0 0 0 1px var(--main-border-color,var(--sage-green));
   background-color:var(--pale-green)!important;
