@@ -12691,3 +12691,34 @@ html body .unread-notifications .notification-right > .notification-kind {
 }
 #world-drawer .world-drawer-rail a[href*="page=plot"]>.forum-fa-icon::before { content:"\f02d"!important; }
 #world-drawer .world-drawer-rail a[href*="page=factions"]>.forum-fa-icon::before { content:"\f132"!important; }
+
+/* Sticker picker palette only: preserve the module's layout and visibility. */
+html body .hvStickerPackModalContainer .hvStickerPackModal {
+  background-color:var(--main-bg-pun,var(--white))!important;
+  border-color:var(--main-border-color,var(--sage-green))!important;
+  color:var(--primary-text)!important;
+}
+html body .hvStickerPackModalContainer :is(.hvStickerPackModalContent,.hvStickerPackModalAdd) {
+  background-color:var(--main-bg-pun,var(--white))!important;
+  border-color:var(--main-border-color,var(--sage-green))!important;
+}
+html body .hvStickerPackModalContainer .hvStickerPackModalTabs {
+  background-color:var(--pale-green)!important;
+  border-color:var(--main-border-color,var(--sage-green))!important;
+  color:var(--primary-text)!important;
+}
+html body .hvStickerPackModalContainer .hvStickerPackModalTab {
+  background-color:transparent!important;
+  border-color:transparent!important;
+  color:var(--primary-text)!important;
+}
+html body .hvStickerPackModalContainer :is(.hvStickerPackItem:hover,.hvStickerPackItem:focus-visible,.hvStickerPackModalTab:hover,.hvStickerPackModalTab:focus-visible) {
+  background-color:color-mix(in srgb,var(--teal) 14%,var(--main-bg-pun,var(--white)))!important;
+  border-color:var(--teal)!important;
+  color:var(--primary-text)!important;
+}
+html body .hvStickerPackModalContainer .hvStickerPackModalTab.active {
+  background-color:color-mix(in srgb,var(--teal) 24%,var(--main-bg-pun,var(--white)))!important;
+  border-color:var(--teal)!important;
+  color:var(--primary-text)!important;
+}
