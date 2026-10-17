@@ -24984,3 +24984,21 @@
     margin-bottom:0!important;
   }
 }
+
+/* Keep wide BBCode tables scrollable inside mobile posts. */
+@media (max-width:800px) {
+  #pun .post-content table {
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box;
+    overflow-x:auto!important;
+    table-layout:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  #pun .post-content table :is(td,th) {
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+  }
+}
