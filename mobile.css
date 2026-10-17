@@ -24465,10 +24465,10 @@
     min-height:0 !important;
     margin:12px 0 0 !important;
     padding:10px 0 0 !important;
-    background:none !important;
+    background:color-mix(in srgb,var(--teal) 12%,transparent) !important;
     border:0 !important;
     border-top:0 !important;
-    border-radius:0 !important;
+    border-radius:8px !important;
     box-shadow:none !important;
     font:400 12px/1.5 var(--font-ui) !important;
     text-align:left !important;
