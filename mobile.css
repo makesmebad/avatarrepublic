@@ -25305,3 +25305,18 @@ html body td[id="button-graffiti_rusff"],
 #pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar img {
   object-fit:cover!important;
 }
+
+/* Keep mobile moderation selectors inside their grid column. */
+@media (max-width:800px) {
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>td.tcmod {
+    width:32px!important;
+    min-width:0!important;
+    max-width:32px!important;
+    justify-self:end!important;
+    text-align:center!important;
+  }
+  #pun#pun #pun-modviewforum #pun-main .forum .tcl :is(.byuser,.byuser-username) {
+    font-size:12px!important;
+    line-height:1.4!important;
+  }
+}
