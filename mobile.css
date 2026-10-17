@@ -24756,3 +24756,14 @@
   #pun #pun-movetopic #pun-main form.container { padding:14px; }
   #pun #pun-movetopic #pun-main .formsubmit input { width:100%; box-sizing:border-box; }
 }
+
+@media (max-width:800px) {
+  #pun #pun-index #pun-main .index-layout-feature tr.index-with-menu:first-child .index-sublinks {
+    padding-top:calc(72px * var(--forum-padding-density,1))!important;
+    margin-top:0!important;
+  }
+  #pun #pun-index #pun-main .index-layout-feature tr.index-with-menu:first-child :is(.tcl,.intd,.tclcon) {
+    height:auto!important;
+    min-height:0!important;
+  }
+}
