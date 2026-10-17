@@ -2730,12 +2730,14 @@
 
   #pun .post-content .quote-box>blockquote::before,#pun .post-content .quote-box>blockquote::after {
     color:var(--teal);
-  }
+  
+    font:900 15px/15px var(--fa)!important;
+}
 
   #pun .post-content .quote-box>blockquote::before {
     width:15px!important;
     height:15px!important;
-    font:900 15px/1 var(--fa)!important;
+    font:900 15px/15px var(--fa)!important;
     left:8px!important;
     top:7px!important;
   }
@@ -9307,12 +9309,14 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
 
   #pun .post-content .quote-box>blockquote::before,#pun .post-content .quote-box>blockquote::after {
     color:var(--teal);
-  }
+  
+    font:900 15px/15px var(--fa)!important;
+}
 
   #pun .post-content .quote-box>blockquote::before {
     width:15px!important;
     height:15px!important;
-    font:900 15px/1 var(--fa)!important;
+    font:900 15px/15px var(--fa)!important;
     left:8px!important;
     top:7px!important;
   }
@@ -13112,6 +13116,8 @@ html body td[id="button-graffiti_rusff"],
   font-size:15px!important;
   line-height:1!important;
   pointer-events:none;
+
+    font:900 15px/15px var(--fa)!important;
 }
 #pun#pun .post-content .quote-box>blockquote::before {
   left:8px!important;
@@ -13133,6 +13139,8 @@ html body td[id="button-graffiti_rusff"],
   font-size:15px!important;
   line-height:1!important;
   pointer-events:none;
+
+    font:900 15px/15px var(--fa)!important;
 }
 #pun#pun .post-content .spoiler-box>blockquote::before {
   left:8px!important;
@@ -13154,4 +13162,17 @@ html body td[id="button-graffiti_rusff"],
   line-height:1!important;
   top:7px!important;
   left:8px!important;
+}
+
+/* Both quote marks use exactly the same glyph, font and 15px box. */
+#pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote::before,
+#pun#pun .post-content :is(.quote-box,.spoiler-box)>blockquote::after {
+  content:"\f10e"!important;
+  font:900 15px/15px var(--fa)!important;
+  width:15px!important;
+  height:15px!important;
+  letter-spacing:0!important;
+  text-indent:0!important;
+  padding:0!important;
+  margin:0!important;
 }
