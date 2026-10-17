@@ -8861,9 +8861,10 @@
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul {
     display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    grid-template-rows:none!important;
-    grid-template-areas:none!important;
+    grid-template-columns:80px repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:auto auto auto!important;
+    grid-template-areas:"avatar name name" "avatar title title" "avatar posts respect"!important;
+    align-items:center!important;
     padding:10px!important;
     margin:0!important;
     gap:6px!important;
@@ -8879,33 +8880,36 @@
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>.pa-author {
-    grid-row:1!important;
+    grid-area:name!important;
     padding:3px 14px!important;
+    overflow-wrap:anywhere!important;
     font:600 19px/1.25 var(--font-body)!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>.pa-title {
-    grid-row:2!important;
+    grid-area:title!important;
+    overflow-wrap:anywhere!important;
     font-size:11px!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>.pa-avatar {
-    grid-row:3!important;
-    width:100%!important;
+    grid-area:avatar!important;
+    align-self:center!important;
+    width:80px!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author .pa-avatar img {
     display:block!important;
-    width:auto!important;
-    height:auto!important;
-    max-width:min(200px,100%)!important;
-    max-height:280px!important;
-    margin:0 auto!important;
+    width:80px!important;
+    height:100px!important;
+    max-width:100%!important;
+    max-height:100px!important;
+    object-fit:cover!important;
+    margin:0!important;
     border-radius:5px!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>:is(.pa-posts,.pa-respect) {
-    grid-row:4!important;
     width:100%!important;
     max-width:80px!important;
     justify-self:center!important;
@@ -8922,11 +8926,11 @@
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>.pa-posts {
-    grid-column:1!important;
+    grid-area:posts!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author>ul>.pa-respect {
-    grid-column:2!important;
+    grid-area:respect!important;
   }
 
   #pun#pun #pun-viewtopic #pun-main .post .post-author :is(.pa-posts,.pa-respect)::before {
