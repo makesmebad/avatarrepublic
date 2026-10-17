@@ -12826,3 +12826,14 @@ html body td[id="button-graffiti_rusff"],
 #pun#pun#pun :is(#button-files_rusff,#button-graffiti_rusff) {
   display:none!important;
 }
+
+/* Distinguish the sticker picker from the standard MyBB smiley button. */
+#pun#pun #form-buttons #button-sticker {
+  background-image:none!important;
+}
+#pun#pun #form-buttons #button-sticker::before {
+  content:"\1F604"!important;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif!important;
+  font-size:16px!important;
+  font-weight:normal!important;
+}
