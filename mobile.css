@@ -16917,7 +16917,7 @@
     position:relative;
     display:block;
     margin:0!important;
-    padding:calc(var(--space-23px)*var(--forum-padding-density)) calc(var(--space-36px)*var(--forum-padding-density))!important;
+    padding:28px 32px 16px!important;
     font:400 14px/1.65 var(--font-body);
     overflow-wrap:anywhere;
     min-width:0;
@@ -16936,8 +16936,11 @@
   }
 
   #pun .post-content .quote-box>blockquote::before {
-    left:9px;
-    top:8px;
+    width:10px!important;
+    height:10px!important;
+    font:900 10px/1 var(--fa)!important;
+    left:8px!important;
+    top:7px!important;
     transform:rotate(180deg);
   }
 
@@ -23298,8 +23301,11 @@
   }
 
   #pun .post-content .quote-box>blockquote::before {
-    left:9px!important;
-    top:0!important;
+    width:10px!important;
+    height:10px!important;
+    font:900 10px/1 var(--fa)!important;
+    left:8px!important;
+    top:7px!important;
     transform:rotate(180deg)!important;
   }
 
@@ -23341,7 +23347,7 @@
   #pun .post-content .spoiler-box>blockquote,#pun .post-content .spoiler-box>div:not(:first-child) {
     position:relative;
     max-width:100%;
-    padding:16px 20px!important;
+    padding:28px 32px 16px!important;
     box-sizing:border-box;
   }
 
