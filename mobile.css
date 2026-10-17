@@ -24767,3 +24767,9 @@
     min-height:0!important;
   }
 }
+
+@media (max-width:800px) {
+  #pun #pun-index #pun-main .category.index-collapsed {
+    margin-bottom:calc(var(--space-65px,65px) / 2)!important;
+  }
+}
