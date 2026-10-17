@@ -24890,3 +24890,28 @@
     padding:3px!important;
   }
 }
+
+@media (max-width:800px) {
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr>.lastpost-link {
+    font-weight:600!important;
+    color:var(--primary-text)!important;
+    text-decoration:underline!important;
+    text-decoration-color:color-mix(in srgb,var(--teal) 30%,transparent)!important;
+    text-decoration-thickness:1px;
+    text-underline-offset:3px;
+  }
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr>.lastpost-link:is(:hover,:focus-visible) {
+    color:var(--links-color,var(--teal))!important;
+    text-decoration-color:currentColor!important;
+  }
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr>.lastpost {
+    color:color-mix(in srgb,var(--primary-text) 72%,transparent)!important;
+  }
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr .datetime {
+    font-variant-numeric:tabular-nums;
+  }
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr .byuser {
+    font-weight:600;
+    color:var(--primary-text);
+  }
+}
