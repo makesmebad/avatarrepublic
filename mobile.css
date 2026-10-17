@@ -23107,7 +23107,7 @@
   }
 
   #pun #pun-userlist .username .user-avatar.no-avatar .avatar-image::after {
-    content:"\f071 "!important;
+    content:"\f128 "!important;
   }
 
   #pun #pun-admin_files #filetable td.ft-tags,#pun #filetable td.ft-tags {
