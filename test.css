@@ -12672,3 +12672,14 @@ html body .unread-notifications .notification-right > .notification-kind {
     margin-right:0!important;
     box-sizing:border-box;
   }
+
+/* The drawer HTML still contains FA6 codepoints; use their FA4 equivalents. */
+#world-drawer .world-drawer-rail a:is([href*="page=plot"],[href*="page=factions"])>.forum-fa-icon {
+  font-size:0!important;
+}
+#world-drawer .world-drawer-rail a:is([href*="page=plot"],[href*="page=factions"])>.forum-fa-icon::before {
+  display:inline-block!important;
+  font:normal 21px/1 var(--fa, 'Font Awesome');
+}
+#world-drawer .world-drawer-rail a[href*="page=plot"]>.forum-fa-icon::before { content:"\f02d"!important; }
+#world-drawer .world-drawer-rail a[href*="page=factions"]>.forum-fa-icon::before { content:"\f132"!important; }
