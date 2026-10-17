@@ -25012,3 +25012,51 @@
     background-image:linear-gradient(color-mix(in srgb,var(--pale-green) 30%,transparent),color-mix(in srgb,var(--pale-green) 30%,transparent)),linear-gradient(0deg,color-mix(in srgb,var(--pale-green) 78%,transparent),var(--pale-green) 65%),var(--image-category9)!important;
   }
 }
+
+/* Compact author panel in mobile post search results. */
+@media (max-width:800px) {
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post .post-author {
+    width:calc(100% - 16px)!important;
+    max-width:calc(100% - 16px)!important;
+    margin:8px!important;
+    padding:10px!important;
+    border:0!important;
+    border-radius:7px!important;
+    background:color-mix(in srgb,var(--pale-green) 65%,transparent)!important;
+    box-sizing:border-box!important;
+  }
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post .post-author>ul {
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:8px 12px!important;
+    width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    background:none!important;
+    border:0!important;
+  }
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post .post-author .pa-author {
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    min-width:0!important;
+    margin:0!important;
+    text-align:left!important;
+    overflow-wrap:anywhere;
+  }
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post .post-author .pa-author::before {
+    content:"\f007"!important;
+    display:inline-block!important;
+    flex:0 0 auto;
+    margin:0!important;
+    font:normal 22px/1 var(--fa)!important;
+    color:var(--teal);
+  }
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post .post-author .pa-replies {
+    margin:0 0 0 auto!important;
+    padding:3px 6px!important;
+    border-radius:4px!important;
+  }
+}
