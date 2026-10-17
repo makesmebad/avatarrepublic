@@ -24478,7 +24478,7 @@
   }
 
   #pun#pun #pun-index#pun-index .category tbody > tr[id^="forum"] > td.tcr :is(.lastpost, .lastpost-link) {
-    display:block !important;
+    display:inline !important;
     position:static !important;
     width:auto !important;
     max-width:100% !important;
@@ -24491,7 +24491,7 @@
   }
 
   #pun#pun #pun-index#pun-index .category tbody > tr[id^="forum"] > td.tcr br {
-    display:inline !important;
+    display:none !important;
   }
 
   #pun#pun #pun-index#pun-index .category tbody > tr[id^="forum"] > :is(td.tc2, td.tc3),
@@ -24913,5 +24913,11 @@
   #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr .byuser {
     font-weight:600;
     color:var(--primary-text);
+  }
+}
+
+@media (max-width:800px) {
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr>.lastpost::before {
+    content:" · ";
   }
 }
