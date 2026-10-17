@@ -25320,3 +25320,35 @@ html body td[id="button-graffiti_rusff"],
     line-height:1.4!important;
   }
 }
+
+/* Center moderation topic-status icons inside their badges. */
+#pun#pun #pun-modviewforum #pun-main .forum :is(.closedatafield,.stickytext) {
+  display:inline-block!important;
+  position:relative!important;
+  width:25px!important;
+  height:25px!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  vertical-align:middle!important;
+  line-height:25px!important;
+  font-size:0!important;
+  letter-spacing:0!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum :is(.closedatafield,.stickytext)::before {
+  position:absolute!important;
+  inset:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:1!important;
+  text-align:center!important;
+  transform:none!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum :is(.closedatafield,.stickytext)::after {
+  content:none!important;
+  display:none!important;
+}
