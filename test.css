@@ -12784,3 +12784,23 @@ html body .hvStickerPackModalContainer .hvStickerPackItem>img {
     flex-shrink:0;
   }
 }
+
+@media (min-width:801px) {
+  #pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr:has(>.tcr a) {
+    grid-template-columns:minmax(0,1fr) 170px!important;
+    grid-template-areas:"title last" "topics last" "posts last"!important;
+    grid-template-rows:minmax(0,1fr) auto auto!important;
+    column-gap:16px!important;
+  }
+  #pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr>.tcl {
+    grid-area:title!important;
+    min-width:0;
+  }
+  #pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr>.tcr {
+    grid-area:last!important;
+    min-width:0;
+    width:100%;
+    align-self:center;
+    box-sizing:border-box;
+  }
+}
