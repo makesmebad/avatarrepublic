@@ -12746,3 +12746,10 @@ html body .hvStickerPackModalContainer .hvStickerPackItem {
   min-width:0;
   margin:0!important;
 }
+html body .hvStickerPackModalContainer .hvStickerPackItem>img {
+  width:50px!important;
+  height:50px!important;
+  max-width:100%!important;
+  max-height:50px!important;
+  object-fit:contain;
+}
