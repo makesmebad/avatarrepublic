@@ -12208,3 +12208,320 @@ html[data-theme="dark"], html.dark {
     text-underline-offset:3px;
   }
 }
+
+/* Notifications share the forum palette; the module keeps its own visibility state. */
+html body .unread-notifications .modal-inner {
+  position:relative!important;
+  inset:auto!important;
+  width:min(720px, calc(100vw - 32px))!important;
+  max-width:calc(100vw - 32px)!important;
+  max-height:calc(100dvh - 32px);
+  margin:clamp(16px, 6vh, 64px) auto!important;
+  padding:0!important;
+  box-sizing:border-box;
+  overflow:hidden;
+  border:1px solid var(--sage-green);
+  border-radius:16px;
+  background:var(--white);
+  color:var(--slate-blue);
+  box-shadow:var(--light-shadow, 0 8px 32px rgba(0,0,0,.2));
+  font:400 14px/1.5 var(--font-ui, Arial, sans-serif);
+}
+
+html body .unread-notifications .modal-inner > h2 {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0;
+  padding:16px 20px;
+  border:0;
+  border-bottom:1px solid var(--sage-green);
+  background:var(--pale-green);
+  color:var(--slate-blue);
+  font:600 24px/1.3 var(--font-body, Georgia, serif);
+}
+
+html body .unread-notifications .modal-inner > h2 .closer {
+  position:static!important;
+  float:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 32px;
+  width:32px;
+  height:32px;
+  margin:0;
+  padding:0;
+  cursor:pointer;
+  font:400 26px/1 Arial, sans-serif;
+  color:var(--teal);
+}
+
+html body .unread-notifications .modal-inner > .container {
+  padding:0!important;
+  border:0;
+  background:transparent;
+  overflow:hidden;
+}
+
+html body .unread-notifications #notifications-settings {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 12px;
+  height:auto;
+  min-height:44px;
+  padding:10px 16px;
+  line-height:1.4;
+  border-bottom:1px solid var(--sage-green);
+}
+
+html body .unread-notifications #notifications-settings > span {
+  float:none!important;
+  margin:0;
+}
+
+html body .unread-notifications #settings-telegram {
+  margin-left:auto!important;
+  font-size:12px;
+}
+
+html body .unread-notifications :is(#notifications-wrap, #notifications-advanced) {
+  max-height:min(60vh, calc(100dvh - 190px));
+  overflow-y:auto;
+  overflow-x:hidden;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+}
+
+html body .unread-notifications :is(#notifications, #notifications-stored) {
+  width:100%;
+  margin:0;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+
+html body .unread-notifications :is(#notifications, #notifications-stored) td.notification-item {
+  padding:14px 16px;
+  border:0;
+  border-bottom:1px solid var(--sage-green);
+  background:var(--white);
+  color:var(--slate-blue);
+  overflow-wrap:anywhere;
+  cursor:pointer;
+}
+
+html body .unread-notifications :is(#notifications, #notifications-stored) tr:hover td {
+  background:var(--light-teal);
+}
+
+html body .unread-notifications .notification-image {
+  width:40px;
+  height:40px;
+  border:1px solid var(--sage-green);
+  border-radius:10px;
+  box-sizing:border-box;
+}
+
+html body .unread-notifications .notification-right {
+  min-width:0;
+  padding-right:26px;
+  overflow-wrap:anywhere;
+}
+
+html body .unread-notifications .msg-preview {
+  display:block;
+  margin-top:6px;
+  font-size:12px;
+  line-height:1.45;
+  opacity:.75;
+  overflow-wrap:anywhere;
+}
+
+html body .unread-notifications .time-ago {
+  margin-top:8px;
+  font-size:11px;
+  opacity:.7;
+}
+
+html body .unread-notifications :is(.notifications-block-title, .notification-filter-status) {
+  height:auto;
+  padding:10px 16px;
+  line-height:1.5;
+  border:0;
+  border-bottom:1px solid var(--sage-green);
+  background:var(--pale-green);
+  color:var(--slate-blue);
+  overflow-wrap:anywhere;
+}
+
+html body .unread-notifications .notification-filter-status[hidden],
+html body .unread-notifications .notification-filter-options[hidden] {
+  display:none;
+}
+
+html body .unread-notifications :is(.notification-filter-tags, .notification-filter-options) {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+html body .unread-notifications :is(.notification-kind, .notification-filter-reset) {
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  max-width:100%;
+  margin:0 0 6px;
+  padding:5px 8px;
+  border:1px solid var(--sage-green);
+  border-radius:8px;
+  background:var(--pale-green);
+  color:var(--slate-blue);
+  font:500 12px/1.4 var(--font-ui, Arial, sans-serif);
+  white-space:normal;
+  overflow-wrap:anywhere;
+  cursor:pointer;
+}
+
+html body .unread-notifications .notification-kind[aria-pressed="true"] {
+  background:var(--teal);
+  color:var(--white);
+}
+
+html body .unread-notifications .notification-kind-icon {
+  font:900 14px/1 var(--fa, 'Font Awesome');
+}
+
+html body .unread-notifications .notifications-advanced-settings {
+  margin:0;
+  padding:8px 16px 16px;
+  list-style:none;
+}
+
+html body .unread-notifications .notifications-advanced-settings li {
+  position:relative;
+  padding:10px 0;
+  border-bottom:1px solid var(--sage-green);
+}
+
+html body .unread-notifications .setting-input input {
+  width:18px;
+  height:18px;
+  margin:2px 0 0;
+  accent-color:var(--teal);
+}
+
+html body .unread-notifications .setting-title {
+  margin-left:28px;
+  color:var(--slate-blue);
+  overflow-wrap:anywhere;
+}
+
+html body .unread-notifications .setting-description {
+  margin-top:4px;
+  font-size:12px;
+  line-height:1.45;
+  opacity:.75;
+}
+
+html body .unread-notifications :is(#notifications-settings, #notifications-wrap) .font-icon {
+  color:var(--teal);
+  font:900 16px/1 var(--fa, 'Font Awesome');
+}
+html body .unread-notifications #notifications-settings #settings-sound a::before { content:"\f028"; }
+html body .unread-notifications #notifications-settings #settings-sound.disabled a::before { content:"\f026"; }
+html body .unread-notifications #notifications-settings #settings-advanced a::before { content:"\f013"; }
+html body .unread-notifications #notifications-settings #settings-back a::before { content:"\f060"; }
+html body .unread-notifications #notifications-wrap .delete-notification a::before { content:"\f00d"; }
+
+html body .unread-notifications a { color:var(--links-color, var(--teal)); }
+html body .unread-notifications a:hover { color:var(--links-hover-color, var(--amber)); }
+html body .unread-notifications :is(a, button, input, summary):focus-visible {
+  outline:2px solid var(--teal);
+  outline-offset:3px;
+}
+
+.jGrowl :is(.jGrowl-notification, .jGrowl-closer), .notification-spoiler {
+  box-sizing:border-box;
+  max-width:calc(100vw - 24px);
+  border:1px solid var(--sage-green);
+  border-radius:12px;
+  background:var(--white);
+  color:var(--slate-blue);
+  box-shadow:var(--light-shadow);
+  font:400 13px/1.5 var(--font-ui, Arial, sans-serif);
+}
+.jGrowl .jGrowl-notification a { color:var(--links-color, var(--teal)); }
+
+/* Mention suggestions preserve the module's inline show/hide behavior. */
+:is(#post, #messages) #post-mentions {
+  position:relative;
+  width:100%;
+  z-index:1000;
+}
+:is(#post, #messages) #mentions-area {
+  display:none;
+  position:absolute;
+  top:auto!important;
+  bottom:0;
+  left:0;
+  width:100%;
+  max-height:208px;
+  height:auto;
+  margin:0;
+  padding:0!important;
+  box-sizing:border-box;
+  overflow-y:auto;
+  border:1px solid var(--sage-green);
+  border-radius:10px;
+  background:var(--white);
+  color:var(--slate-blue);
+  box-shadow:var(--light-shadow);
+}
+#mentions-area .post-mentions-item {
+  height:36px;
+  padding:0;
+  line-height:36px;
+  cursor:pointer;
+}
+#mentions-area .post-mentions-item > div { padding:0 10px; }
+#mentions-area .post-mentions-item:is(:hover, :focus-within) > div { background:var(--light-teal); }
+#mentions-area .mention-avatar {
+  float:left;
+  width:30px;
+  height:30px;
+  margin:3px 0;
+  border-radius:50%;
+  background-position:center;
+  background-size:cover;
+}
+#mentions-area .mention-username { padding-left:10px; }
+
+/* Notification type badges use the existing FA4 font, including newer module codes. */
+html body .unread-notifications .notification-kind-icon {
+  font-size:0;
+}
+html body .unread-notifications .notification-kind-icon::before {
+  content:"\f0f3";
+  font:900 14px/1 var(--fa, 'Font Awesome');
+}
+html body .unread-notifications [data-kind="message"] .notification-kind-icon::before { content:"\f0e0"; }
+html body .unread-notifications [data-kind="reply"] .notification-kind-icon::before { content:"\f112"; }
+html body .unread-notifications [data-kind="mention"] .notification-kind-icon::before { content:"\f1fa"; }
+html body .unread-notifications [data-kind="topic_subscribed"] .notification-kind-icon::before { content:"\f02e"; }
+html body .unread-notifications [data-kind="forum_subscribed"] .notification-kind-icon::before { content:"\f07c"; }
+html body .unread-notifications [data-kind="important_post"] .notification-kind-icon::before { content:"\f06a"; }
+html body .unread-notifications [data-kind="vote"] .notification-kind-icon::before { content:"\f164"; }
+html body .unread-notifications [data-kind="reaction"] .notification-kind-icon::before { content:"\f118"; }
+html body .unread-notifications [data-kind="poll_answer"] .notification-kind-icon::before { content:"\f080"; }
+html body .unread-notifications [data-kind="new_user"] .notification-kind-icon::before { content:"\f234"; }
+html body .unread-notifications [data-kind="fields"] .notification-kind-icon::before { content:"\f044"; }
+
+.post-vote .pa-respect { display:block!important; }
+
+html body .unread-notifications .notification-right > .notification-kind {
+  display:flex;
+  width:fit-content;
+  margin-bottom:6px;
+}

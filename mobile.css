@@ -24662,3 +24662,71 @@
     display:none!important;
   }
 }
+
+/* Notification lists and settings remain reachable on narrow and short screens. */
+@media (max-width:800px) {
+  html body .unread-notifications .modal-inner {
+    width:calc(100vw - 16px)!important;
+    max-width:calc(100vw - 16px)!important;
+    max-height:calc(100dvh - 16px);
+    margin:8px auto!important;
+    border-radius:12px;
+  }
+  html body .unread-notifications .modal-inner > h2 {
+    padding:12px;
+    font-size:20px;
+  }
+  .unread-notifications #notifications-settings {
+    padding:8px 12px;
+    gap:8px;
+  }
+  .unread-notifications #settings-telegram {
+    flex-basis:100%;
+    margin-left:0!important;
+  }
+  .unread-notifications :is(#notifications-wrap, #notifications-advanced) {
+    max-height:calc(100dvh - 190px);
+  }
+  .unread-notifications :is(#notifications, #notifications-stored) td.notification-item {
+    padding:12px;
+  }
+  .unread-notifications #notifications-wrap .delete-notification {
+    visibility:visible;
+    opacity:1;
+  }
+  .unread-notifications #notifications-wrap .notification-type-toggle {
+    float:none;
+    clear:both;
+    margin:8px 0 0;
+    opacity:1;
+    font-size:12px;
+  }
+  .unread-notifications .notifications-block-title {
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 10px;
+  }
+  .unread-notifications :is(#settings-enabled, #clear-stored) {
+    float:none!important;
+    margin-left:auto;
+  }
+  #pun-reputation .inner {
+    width:calc(100vw - 24px);
+    max-width:calc(100vw - 24px);
+    margin-left:calc(12px - 50vw);
+  }
+}
+
+@media (max-width:540px) {
+  #pun .punbb .main .post_reputation tbody tr:not(:first-of-type) td {
+    display:block;
+    width:100%!important;
+    box-sizing:border-box;
+    border:0!important;
+  }
+  .post_reputation tbody tr:last-of-type .tcl { display:none!important; }
+  .post_reputation #reputationText {
+    width:100%!important;
+    box-sizing:border-box;
+  }
+}
