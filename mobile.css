@@ -25118,14 +25118,21 @@ html body td[id="button-graffiti_rusff"],
   display:none!important;
 }
 
-/* Use the smile glyph supported by the existing Font Awesome 4 font. */
+/* Font Awesome face-grin-beam for the sticker picker only. */
+@font-face {
+  font-family:"Forum Sticker Icons";
+  src:url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-solid-900.woff2") format("woff2");
+  font-style:normal;
+  font-weight:900;
+  font-display:swap;
+}
 #pun#pun #form-buttons #button-sticker {
   background-image:none!important;
 }
 #pun#pun #form-buttons #button-sticker::before {
-  content:"\f118"!important;
-  font-family:var(--fa,"FontAwesome")!important;
+  content:"\f582"!important;
+  font-family:"Forum Sticker Icons"!important;
   font-size:16px!important;
   font-style:normal!important;
-  font-weight:normal!important;
+  font-weight:900!important;
 }
