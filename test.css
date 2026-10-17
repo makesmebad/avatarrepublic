@@ -12737,7 +12737,7 @@ html body .hvStickerPackModalContainer .hvStickerPackItem {
 /* Fill the available picker width with compact sticker cells. */
 html body .hvStickerPackModalContainer .hvStickerPackModalContent:not(.hvStickerPackModalBulk):not(.hidden) {
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(58px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(55px,1fr));
   gap:4px!important;
   align-content:start;
 }
@@ -12747,9 +12747,9 @@ html body .hvStickerPackModalContainer .hvStickerPackItem {
   margin:0!important;
 }
 html body .hvStickerPackModalContainer .hvStickerPackItem>img {
-  width:50px!important;
-  height:50px!important;
+  width:47px!important;
+  height:47px!important;
   max-width:100%!important;
-  max-height:50px!important;
+  max-height:47px!important;
   object-fit:contain;
 }
