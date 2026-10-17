@@ -13059,3 +13059,13 @@ html body td[id="button-graffiti_rusff"],
   font-family:var(--fa,"FontAwesome")!important;
   font-style:normal!important;
 }
+
+/* Profile icon for authors in desktop post search results. */
+@media (min-width:801px) {
+  #pun#pun :is(#pun-searchposts #pun-main,#pun-main.show_user_posts) .post-author .pa-author::before {
+    content:"\f007"!important;
+    font-family:var(--fa,"FontAwesome")!important;
+    font-style:normal!important;
+    font-weight:normal!important;
+  }
+}
