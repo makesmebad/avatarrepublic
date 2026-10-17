@@ -12812,8 +12812,8 @@ html body .hvStickerPackModalContainer .hvStickerPackItem>img {
 }
 
 /* Hide unused Rusff editor buttons and the post report action at all widths. */
-#pun#pun #button-files_rusff,
-#pun#pun #button-graffiti_rusff,
+#pun#pun #form-buttons td#button-files_rusff,
+#pun#pun #form-buttons td#button-graffiti_rusff,
 #pun#pun .post-links li.pl-reports {
   display:none!important;
 }
