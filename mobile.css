@@ -25118,7 +25118,7 @@ html body td[id="button-graffiti_rusff"],
   display:none!important;
 }
 
-/* Font Awesome face-grin-beam for the sticker picker only. */
+/* Font Awesome cat for the sticker picker only. */
 @font-face {
   font-family:"Forum Sticker Icons";
   src:url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/webfonts/fa-solid-900.woff2") format("woff2");
@@ -25126,11 +25126,11 @@ html body td[id="button-graffiti_rusff"],
   font-weight:900;
   font-display:swap;
 }
-#pun#pun #form-buttons #button-sticker {
+#pun#pun#pun #form-buttons #button-sticker {
   background-image:none!important;
 }
-#pun#pun #form-buttons #button-sticker::before {
-  content:"\f582"!important;
+#pun#pun#pun #form-buttons #button-sticker::before {
+  content:"\f6be"!important;
   font-family:"Forum Sticker Icons"!important;
   font-size:16px!important;
   font-style:normal!important;
