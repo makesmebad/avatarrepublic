@@ -1,14 +1,18 @@
-<!-- Place in HTML head, before stylesheet imports and other scripts. -->
+<!-- Optional: move this preload block into head for the earliest discovery. -->
+<!-- Declarative links are discovered even while earlier scripts block parsing. -->
 <link rel="preconnect" href="https://forumstatic.ru">
+<link rel="preload" as="image" href="https://forumstatic.ru/files/001c/25/f9/42433.webp?v=1" media="(prefers-color-scheme: light)" fetchpriority="high" data-fantasy-header-preload="light">
+<link rel="preload" as="image" href="https://forumstatic.ru/files/001c/25/f9/47523.webp?v=1" media="(prefers-color-scheme: dark)" fetchpriority="high" data-fantasy-header-preload="dark">
 <script>
 (function () {
  'use strict';
- var root=document.documentElement;
- var saved;try{saved=localStorage.getItem('forum-index-theme');}catch(e){}
+ var root=document.documentElement,saved;
+ try{saved=localStorage.getItem('forum-index-theme');}catch(e){}
  var dark=saved==='dark'||(saved!=='light'&&(root.dataset.theme==='dark'||root.classList.contains('dark')||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches)));
- var href='https://forumstatic.ru/files/001c/25/f9/'+(dark?'47523':'42433')+'.webp?v=1';
- if(!document.getElementById('fantasy-header-preload')){
-  var link=document.createElement('link');link.id='fantasy-header-preload';link.rel='preload';link.as='image';link.href=href;link.setAttribute('fetchpriority','high');document.head.appendChild(link);
- }
+ var theme=dark?'dark':'light';
+ document.querySelectorAll('link[data-fantasy-header-preload]').forEach(function(link){
+  link.media=link.getAttribute('data-fantasy-header-preload')===theme?'all':'not all';
+  if(link.media==='all'&&!document.getElementById('fantasy-header-preload'))link.id='fantasy-header-preload';
+ });
 })();
 </script>
