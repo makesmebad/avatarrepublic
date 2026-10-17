@@ -4658,7 +4658,7 @@
     display:grid!important;
     grid-template-columns:24px minmax(0,1fr) auto!important;
     grid-template-rows:auto auto auto!important;
-    grid-template-areas:"star title title""last last last"". forum replies"!important;
+    grid-template-areas:"star title title""last last last""forum forum replies"!important;
     gap:6px!important;
     width:100%!important;
     min-width:0!important;
