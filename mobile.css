@@ -24887,5 +24887,6 @@
   #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr {
     background-color:color-mix(in srgb,var(--teal) 16%,transparent)!important;
     border-radius:8px!important;
+    padding:3px!important;
   }
 }
