@@ -25002,3 +25002,13 @@
     overflow-wrap:normal!important;
   }
 }
+
+/* Soften quote background artwork on small screens. */
+@media (max-width:800px) {
+  #pun#pun .post-content .quote-box {
+    background-image:linear-gradient(color-mix(in srgb,var(--pale-green) 30%,transparent),color-mix(in srgb,var(--pale-green) 30%,transparent)),linear-gradient(0deg,var(--light-teal),var(--pale-green) 65%),var(--image-category9)!important;
+  }
+  html:not([data-theme="dark"]):not(.dark) #pun#pun .post-content .quote-box {
+    background-image:linear-gradient(color-mix(in srgb,var(--pale-green) 30%,transparent),color-mix(in srgb,var(--pale-green) 30%,transparent)),linear-gradient(0deg,color-mix(in srgb,var(--pale-green) 78%,transparent),var(--pale-green) 65%),var(--image-category9)!important;
+  }
+}
