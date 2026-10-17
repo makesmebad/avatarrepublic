@@ -1,0 +1,192 @@
+<script>
+(function () {
+ 'use strict';
+ var root=document.documentElement;
+ var saved;try{saved=localStorage.getItem('forum-index-theme');}catch(e){}
+ var dark=saved==='dark'||(saved!=='light'&&(root.dataset.theme==='dark'||root.classList.contains('dark')||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches)));
+ var href='https://forumstatic.ru/files/001c/25/f9/'+(dark?'47523':'42433')+'.webp?v=1';
+ if(!document.getElementById('fantasy-header-preload')){
+  var link=document.createElement('link');link.id='fantasy-header-preload';link.rel='preload';link.as='image';link.href=href;link.setAttribute('fetchpriority','high');document.head.appendChild(link);
+ }
+})();
+</script>
+<div id="forum-header-layout" data-header-version="fantasy-v2">
+ <div class="forum-header">
+  <div class="header-fireflies" aria-hidden="true"></div>
+  <button type="button" class="header-title-toggle" aria-expanded="false" aria-controls="header-content-panel"><span>FANTASY FANDOM</span></button>
+  <div class="header-content" id="header-content-panel">
+   <div class="header-top">
+    <div class="header-context">
+     <a class="header-context-link" href="https://envytest.mybb.ru/pages.php?page=plot">Читать сюжет</a>
+     <div class="header-context-text"><b>У каждого мира есть своя тайна.</b><br>Когда над древними городами загораются блуждающие огни, границы между мирами становятся тоньше. Забытые дороги открываются вновь, а магия отвечает тем, кто готов услышать её зов.<br><br>Здесь встречаются странники, хранители знаний и наследники старых династий. Одни ищут дом, другие — власть, третьи — ответ на вопрос, который не даёт им покоя.<br><br><b>Какую историю расскажете вы?</b></div>
+    </div>
+    <div class="header-updates">
+     <div class="header-news">
+      <div class="header-news-row"><div class="header-news-date">МИР</div><a href="https://envytest.mybb.ru/pages.php?page=world"><div class="header-news-text">За гранью привычного<br><span>Земли, магия и древние тайны</span></div></a></div>
+      <div class="header-news-row"><div class="header-news-date">ИГРА</div><a href="https://envytest.mybb.ru/pages.php?page=plot"><div class="header-news-text">Начало путешествия<br><span>Отправная точка вашей истории</span></div></a></div>
+      <div class="header-news-row"><div class="header-news-date">ЛОР</div><a href="https://envytest.mybb.ru/pages.php?page=factions"><div class="header-news-text">На чьей вы стороне?<br><span>Знакомство с фракциями</span></div></a></div>
+      <div class="header-news-row"><div class="header-news-date">ГИД</div><a href="https://envytest.mybb.ru/pages.php?page=guide"><div class="header-news-text">Первые шаги<br><span>Помощь новым участникам</span></div></a></div>
+      <div class="header-news-row"><div class="header-news-date">ЛС</div><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2"><div class="header-news-text">Есть вопрос?<br><span>Напишите администрации</span></div></a></div>
+     </div>
+    </div>
+   </div>
+   <div class="header-bottom">
+    <div class="header-staff">
+     <div class="header-staff-lead"></div> <div class="header-staff-1 header-staff-card" title="Администрация"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2">Администрация</a></div></div> <div class="header-staff-2 header-staff-card" title="Вопросы по миру"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2">Вопросы по миру</a></div></div> <div class="header-staff-3 header-staff-card" title="Помощь новичкам"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2">Помощь новичкам</a></div></div> <div class="header-staff-4 header-staff-card" title="Игровые вопросы"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2">Игровые вопросы</a></div></div> <div class="header-staff-5 header-staff-card" title="Обратная связь"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/messages.php?action=new&amp;uid=2">Обратная связь</a></div></div> <div class="header-staff-6 header-staff-card" title="Участники"><div class="header-staff-overlay"><a href="https://envytest.mybb.ru/userlist.php">Участники</a></div></div>    </div>
+    <div class="header-recent"><div id="header-recent-list"><div class="header-recent-scroll">
+     <div class="mod-recent-row"><a class="mod-recent-title" href="https://envytest.mybb.ru/search.php?action=show_recent">Новые истории начинаются здесь</a><span class="mod-recent-info">Открыть активные темы форума</span></div>
+     <div class="mod-recent-row"><a class="mod-recent-title" href="https://envytest.mybb.ru/search.php?action=show_unanswered">Истории в ожидании ответа</a><span class="mod-recent-info">Темы без ответов</span></div>
+     <div class="mod-recent-row"><a class="mod-recent-title" href="https://envytest.mybb.ru/userlist.php">Найти попутчика</a><span class="mod-recent-info">Познакомиться с участниками</span></div>
+     <div class="mod-recent-row"><a class="mod-recent-title" href="https://envytest.mybb.ru/pages.php?page=guide">Ваш первый шаг в новый мир</a><span class="mod-recent-info">Путеводитель для новичков</span></div>
+    </div></div><a class="header-recent-title" href="https://envytest.mybb.ru/search.php?action=show_recent">Последние темы</a></div>
+   </div>
+  </div>
+  <div class="header-aside"><div class="header-activity"><section class="header-activity-group header-activity-flood"><div class="header-activity-title">Активисты флуда</div><div class="header-activity-members"><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 1 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 2 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 3 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 4 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 5 — участник пока не выбран"><span class="header-activity-avatar"></span></a></div></section><section class="header-activity-group header-activity-posts"><div class="header-activity-title">Активисты по постам</div><div class="header-activity-members"><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 1 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 2 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 3 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 4 — участник пока не выбран"><span class="header-activity-avatar"></span></a><a class="header-activity-member header-activity-empty" href="https://envytest.mybb.ru/userlist.php" title="Место 5 — участник пока не выбран"><span class="header-activity-avatar"></span></a></div></section></div></div></div></div>
+<script>
+(function () {
+ function mountHeader() {
+  var copies=Array.from(document.querySelectorAll('[id="forum-header-layout"]'));
+  var current=copies.filter(function(copy){return copy.dataset.headerVersion==='fantasy-v2';});
+  var header=current[current.length-1];
+  var forum=document.querySelector('#pun > .punbb');
+  if (!header || !forum || forum.classList.contains('punbb-admin')) return;
+  var savedNav=document.getElementById('pun-navlinks');
+  forum.insertBefore(header,forum.firstChild);
+  var nav=savedNav;
+  var slot=header.querySelector('.forum-header');
+  if(nav && slot) {nav.classList.add('header-navigation');nav.inert=false;nav.removeAttribute('aria-hidden');if(nav.parentNode!==slot)slot.appendChild(nav);}
+  if(nav && !header._themePlacementObserver) {
+   function placeThemeButton() {
+    var list=nav.querySelector('ul.container') || nav.querySelector('ul');
+    var bar=document.querySelector('#pun .index-theme');
+    if(!list || !bar) return;
+    if(nav.contains(bar)) {header._themePlacementObserver.disconnect();return;}
+    var item=document.createElement('li');
+    item.className='header-theme-item';
+    list.appendChild(item);
+    item.appendChild(bar);
+    header._themePlacementObserver.disconnect();
+   }
+   header._themePlacementObserver=new MutationObserver(placeThemeButton);
+   header._themePlacementObserver.observe(document.getElementById('pun'),{childList:true,subtree:true});
+   placeThemeButton();
+   setTimeout(function(){header._themePlacementObserver.disconnect();},10000);
+  }
+  copies.forEach(function(copy){if(copy!==header) copy.remove();});
+  forum.classList.add('has-custom-header');
+  header.classList.add('header-ready');
+  if(header.dataset.headerMounted==='true') return;
+  header.dataset.headerMounted='true';
+  var shell=header.querySelector('.forum-header');
+  function syncHeaderBackgroundWidth() {
+   var rect=shell.getBoundingClientRect();
+   var width=shell.clientWidth;
+   var previousShift=parseFloat(shell.style.getPropertyValue('--header-pixel-shift')) || 0;
+   var desktop=window.matchMedia('(min-width:801px)').matches;
+   var left=rect.left-(desktop?previousShift:0);
+   var pixelRatio=window.devicePixelRatio || 1;
+   var shift=desktop?Math.round(left*pixelRatio)/pixelRatio-left:0;
+   if(shell.style.getPropertyValue('--header-background-width')!==width+'px') shell.style.setProperty('--header-background-width',width+'px');
+   if(shell.style.getPropertyValue('--header-pixel-shift')!==shift+'px') shell.style.setProperty('--header-pixel-shift',shift+'px');
+  }
+  var backgroundFrame=0;
+  function queueBackgroundWidth(){if(!backgroundFrame)backgroundFrame=requestAnimationFrame(function(){backgroundFrame=0;syncHeaderBackgroundWidth();});}
+  queueBackgroundWidth();
+  if(window.ResizeObserver) {
+   var backgroundSizer=new ResizeObserver(queueBackgroundWidth);
+   backgroundSizer.observe(shell);
+  }
+  window.addEventListener('resize',queueBackgroundWidth,{passive:true});
+  var mobileLayout=window.matchMedia('(max-width:800px)');
+  function arrangeMobileHeader() {
+   var content=header.querySelector('.header-content');
+   var aside=header.querySelector('.header-aside');
+   var viewport=header.querySelector('.header-panel-scroll');
+   if(mobileLayout.matches && !viewport) {
+    viewport=document.createElement('div');viewport.className='header-panel-scroll';
+    var canvas=document.createElement('div');canvas.className='header-panel-canvas';
+    viewport.appendChild(canvas);shell.appendChild(viewport);
+    canvas.appendChild(content);canvas.appendChild(aside);
+   } else if(!mobileLayout.matches && viewport) {
+    shell.appendChild(content);shell.appendChild(aside);viewport.remove();
+   }
+  }
+  arrangeMobileHeader();
+  mobileLayout.addEventListener('change',arrangeMobileHeader);
+  var toggle=header.querySelector('.header-title-toggle');
+  if(toggle) {
+   shell.classList.add('header-interactive');
+   var panels=[header.querySelector('.header-content'),header.querySelector('.header-aside')];
+   var transitionTimer;
+   var firstState=true;
+   function setOpen(open) {
+    clearTimeout(transitionTimer);
+    var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try {localStorage.setItem('fantasy-header-expanded',String(open));} catch(e) {}
+    toggle.setAttribute('aria-expanded',String(open));
+    panels.forEach(function(panel){if(panel){panel.inert=!open;panel.setAttribute('aria-hidden',String(!open));}});
+    function finishTransition() {
+     shell.classList.toggle('header-expanded',open);
+     shell.classList.remove('header-opening','header-closing');
+     toggle.setAttribute('aria-label',open?'FANTASY FANDOM — свернуть шапку':'FANTASY FANDOM — открыть шапку');
+    }
+    if(firstState || reduced) {firstState=false;finishTransition();return;}
+    shell.classList.remove('header-opening','header-closing');
+    shell.classList.add(open?'header-opening':'header-closing');
+    transitionTimer=setTimeout(finishTransition,open?420:600);
+   }
+   toggle.addEventListener('click',function(){setOpen(toggle.getAttribute('aria-expanded')!=='true');});
+   var savedOpen=false;
+   try {savedOpen=localStorage.getItem('fantasy-header-expanded')==='true';} catch(e) {}
+   setOpen(savedOpen);
+  }
+  function initFireflies() {
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var lights=header.querySelector('.header-fireflies');
+  if(lights && !lights.children.length) {
+   var fragment=document.createDocumentFragment();
+   for(var i=0;i<24;i++) {
+    var light=document.createElement('span');
+    light.className='header-firefly';
+    light.style.setProperty('--x1',(5+Math.random()*90)+'%');
+    light.style.setProperty('--y1',(5+Math.random()*90)+'%');
+    light.style.setProperty('--x2',(5+Math.random()*90)+'%');
+    light.style.setProperty('--y2',(5+Math.random()*90)+'%');
+    light.style.setProperty('--x3',(5+Math.random()*90)+'%');
+    light.style.setProperty('--y3',(5+Math.random()*90)+'%');
+    light.style.setProperty('--flight-time',(14+Math.random()*18)+'s');
+    light.style.setProperty('--flight-delay',(-Math.random()*30)+'s');
+    light.style.setProperty('--light-size',(2+Math.random()*3)+'px');
+    fragment.appendChild(light);
+   }
+   lights.appendChild(fragment);
+   var flightWidth=-1,flightHeight=-1,flightFrame=0;
+   function syncFlightPositions() {
+    flightFrame=0;
+    var width=lights.clientWidth,height=lights.clientHeight;
+    if(width===flightWidth && height===flightHeight) return;
+    flightWidth=width;flightHeight=height;
+    Array.from(lights.children).forEach(function(light){
+     for(var point=1;point<=3;point++) {
+      light.style.setProperty('--fly-x'+point,(parseFloat(light.style.getPropertyValue('--x'+point))*width/100)+'px');
+      light.style.setProperty('--fly-y'+point,(parseFloat(light.style.getPropertyValue('--y'+point))*height/100)+'px');
+     }
+    });
+   }
+   function queueFlightPositions(){if(!flightFrame)flightFrame=requestAnimationFrame(syncFlightPositions);}
+   queueFlightPositions();
+   if(window.ResizeObserver)new ResizeObserver(queueFlightPositions).observe(lights);
+   else window.addEventListener('resize',queueFlightPositions);
+  }
+
+  }
+  requestAnimationFrame(function(){
+   if(window.requestIdleCallback)requestIdleCallback(initFireflies,{timeout:1500});
+   else setTimeout(initFireflies,150);
+  });
+ }
+ mountHeader();
+ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mountHeader);
+ // DOMContentLoaded runs a second idempotent pass for navigation parsed later.
+})();
+</script>
