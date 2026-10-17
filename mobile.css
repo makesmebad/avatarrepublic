@@ -25072,3 +25072,39 @@
     translate:0 4px;
   }
 }
+
+/* Uniform mobile header navigation buttons with softer corner rounding. */
+@media (max-width:800px) {
+  #pun#pun #forum-header-layout .forum-header>#pun-navlinks.header-navigation {
+    border-radius:12px!important;
+  }
+  #pun#pun #forum-header-layout #pun-navlinks.header-navigation>ul.container>li {
+    flex:0 0 32px!important;
+    width:32px!important;
+    min-width:32px!important;
+    max-width:32px!important;
+    height:32px!important;
+  }
+  #pun#pun #forum-header-layout #pun-navlinks.header-navigation>ul.container>li>a,
+  #pun#pun #forum-header-layout #pun-navlinks .index-theme button {
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex:0 0 32px!important;
+    width:32px!important;
+    min-width:32px!important;
+    max-width:32px!important;
+    height:32px!important;
+    min-height:32px!important;
+    max-height:32px!important;
+    padding:0!important;
+    box-sizing:border-box!important;
+    border-radius:6px!important;
+  }
+  #pun#pun #forum-header-layout #pun-navlinks .index-theme {
+    flex:0 0 32px!important;
+    width:32px!important;
+    min-width:32px!important;
+    max-width:32px!important;
+  }
+}
