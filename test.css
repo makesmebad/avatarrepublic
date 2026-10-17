@@ -12525,3 +12525,150 @@ html body .unread-notifications .notification-right > .notification-kind {
   width:fit-content;
   margin-bottom:6px;
 }
+
+/* Moderation pages: keep controls and table columns in the forum palette. */
+#pun :is(#pun-modviewforum,#pun-movetopic) #pun-main>h1 {
+  padding:18px 20px;
+  border:1px solid var(--main-border-color,var(--sage-green));
+  border-radius:14px;
+  background:var(--pale-green);
+  color:var(--primary-text);
+  overflow-wrap:anywhere;
+}
+#pun #pun-modviewforum #pun-main .forum>.container,
+#pun #pun-movetopic #pun-main .formal {
+  border:1px solid var(--main-border-color,var(--sage-green));
+  border-radius:14px;
+  background:var(--pale-green);
+  overflow:hidden;
+}
+#pun #pun-modviewforum #pun-main table {
+  width:100%;
+  table-layout:fixed;
+  border-collapse:collapse;
+}
+#pun #pun-modviewforum #pun-main th {
+  padding:12px;
+  background:var(--teal);
+  color:var(--white);
+  text-align:left;
+}
+#pun #pun-modviewforum #pun-main td {
+  padding:14px 12px;
+  border-bottom:1px solid var(--main-border-color,var(--sage-green));
+  overflow-wrap:anywhere;
+  vertical-align:middle;
+}
+#pun #pun-modviewforum #pun-main tr:last-child>td { border-bottom:0; }
+#pun #pun-modviewforum #pun-main tbody tr:has(input:checked) {
+  background:color-mix(in srgb,var(--teal) 12%,var(--pale-green));
+}
+#pun #pun-modviewforum #pun-main .tcmod { width:64px; text-align:center; }
+#pun #pun-modviewforum #pun-main :is(.tc2,.tc3) { width:80px; text-align:center; }
+#pun #pun-modviewforum #pun-main .tcr { width:220px; }
+#pun #pun-modviewforum #pun-main .tcmod input { width:18px; height:18px; accent-color:var(--teal); cursor:pointer; }
+#pun #pun-modviewforum #pun-main .modmenu>.container {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  padding:14px;
+  margin-top:14px;
+  border:1px solid var(--main-border-color,var(--sage-green));
+  border-radius:14px;
+  background:var(--pale-green);
+}
+#pun #pun-movetopic #pun-main form.container { padding:20px; }
+#pun #pun-movetopic #pun-main fieldset { min-width:0; border:0; }
+#pun #pun-movetopic #pun-main legend { padding:0 0 14px; font-weight:600; }
+#pun #pun-movetopic #pun-main .fs-box { padding:0; }
+#pun #pun-movetopic #pun-main .selectfield { margin-bottom:16px; }
+#pun #pun-movetopic #pun-main select {
+  width:100%;
+  max-width:560px;
+  min-width:0;
+  box-sizing:border-box;
+  margin-top:8px;
+  padding:10px 12px;
+  border:1px solid var(--main-border-color,var(--sage-green));
+  border-radius:8px;
+  background:var(--main-bg-pun,var(--white));
+  color:var(--primary-text);
+}
+#pun #pun-movetopic #pun-main .checkfield { display:flex; align-items:flex-start; gap:8px; }
+#pun #pun-movetopic #pun-main .checkfield input { flex:none; margin-top:3px; }
+#pun #pun-movetopic #pun-main .formsubmit { margin:18px 0 0; }
+
+/* An empty forum is one message, not a topic card with missing columns. */
+#pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan]) {
+  display:block!important;
+  width:100%!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:24px!important;
+  box-sizing:border-box;
+  text-align:center;
+}
+#pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan])::before,
+#pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan])::after { display:none!important; }
+#pun #pun-viewforum #pun-main .forum tbody>tr>td[colspan] {
+  display:block!important;
+  width:100%!important;
+  padding:0!important;
+  border:0!important;
+  background:none!important;
+  text-align:center!important;
+}
+
+/* A category with one forum must keep its geometry even if the layout script
+   assigns the feature/mirrored class again after a neighbouring collapse. */
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody {
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr {
+  grid-column:1/-1!important;
+  grid-row:auto!important;
+  height:auto!important;
+  min-height:190px!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  grid-template-areas:"title title" "last last" "topics posts"!important;
+  grid-template-rows:auto 1fr auto!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr h3 {
+  font-size:18px!important;
+  text-align:left!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr .tcr {
+  justify-content:flex-start!important;
+  text-align:left!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr .index-sublinks {
+  padding-top:0!important;
+  margin-top:10px!important;
+  justify-content:flex-start!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr .index-sublinks a {
+  width:auto!important;
+  height:auto!important;
+  min-height:32px;
+  padding:7px 12px!important;
+  border-radius:10px!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr { column-gap:5px!important; }
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr h3>a {
+  font-size:18px!important;
+  line-height:1.3!important;
+}
+#pun #pun-index #pun-main .category:has(tbody>tr:only-child) tbody>tr .tcr {
+  flex-direction:column!important;
+  flex-wrap:nowrap!important;
+}
+  #pun #pun-modviewforum #pun-main .modmenu {
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    box-sizing:border-box;
+  }

@@ -24730,3 +24730,29 @@
     box-sizing:border-box;
   }
 }
+
+@media (max-width:800px) {
+  #pun #pun-modviewforum #pun-main .forum thead { display:none; }
+  #pun #pun-modviewforum #pun-main .forum tbody { display:grid; gap:10px; }
+  #pun #pun-modviewforum #pun-main .forum tbody>tr {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 40px;
+    grid-template-rows:auto;
+    align-items:center;
+    padding:12px;
+    border-bottom:1px solid var(--main-border-color,var(--sage-green));
+  }
+  #pun #pun-modviewforum #pun-main .forum tbody>tr>td {
+    width:auto;
+    min-width:0;
+    padding:0;
+    border:0;
+  }
+  #pun #pun-modviewforum #pun-main .forum .tcl { grid-column:1; grid-row:1; }
+  #pun #pun-modviewforum #pun-main .forum .tcmod { grid-column:2; grid-row:1; display:block; }
+  #pun #pun-modviewforum #pun-main .forum :is(.tc2,.tc3,.tcr) { display:none; }
+  #pun #pun-modviewforum #pun-main .modmenu strong { flex-basis:100%; }
+  #pun #pun-modviewforum #pun-main .modmenu input { flex:1 1 120px; min-width:0; }
+  #pun #pun-movetopic #pun-main form.container { padding:14px; }
+  #pun #pun-movetopic #pun-main .formsubmit input { width:100%; box-sizing:border-box; }
+}
