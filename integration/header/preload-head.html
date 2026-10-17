@@ -1,0 +1,14 @@
+<!-- Place in HTML head, before stylesheet imports and other scripts. -->
+<link rel="preconnect" href="https://forumstatic.ru">
+<script>
+(function () {
+ 'use strict';
+ var root=document.documentElement;
+ var saved;try{saved=localStorage.getItem('forum-index-theme');}catch(e){}
+ var dark=saved==='dark'||(saved!=='light'&&(root.dataset.theme==='dark'||root.classList.contains('dark')||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches)));
+ var href='https://forumstatic.ru/files/001c/25/f9/'+(dark?'47523':'42433')+'.webp?v=1';
+ if(!document.getElementById('fantasy-header-preload')){
+  var link=document.createElement('link');link.id='fantasy-header-preload';link.rel='preload';link.as='image';link.href=href;link.setAttribute('fetchpriority','high');document.head.appendChild(link);
+ }
+})();
+</script>
