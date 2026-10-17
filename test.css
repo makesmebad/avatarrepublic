@@ -12601,7 +12601,11 @@ html body .unread-notifications .notification-right > .notification-kind {
 
 /* An empty forum is one message, not a topic card with missing columns. */
 #pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan]) {
-  display:block!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto!important;
+  grid-template-areas:"title"!important;
+  gap:0!important;
   width:100%!important;
   min-height:0!important;
   height:auto!important;
@@ -12611,7 +12615,11 @@ html body .unread-notifications .notification-right > .notification-kind {
 }
 #pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan])::before,
 #pun #pun-viewforum #pun-main .forum tbody>tr:has(>td[colspan])::after { display:none!important; }
-#pun #pun-viewforum #pun-main .forum tbody>tr>td[colspan] {
+#pun #pun-viewforum #pun-main .forum tbody>tr>td.tcl[colspan] {
+  grid-area:title!important;
+  grid-column:1/-1!important;
+  min-width:0!important;
+  box-sizing:border-box;
   display:block!important;
   width:100%!important;
   padding:0!important;
