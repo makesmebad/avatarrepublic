@@ -1,5 +1,114 @@
 @charset "windows-1251";
 
+/* Bookmarks: shared appearance for desktop and mobile. */
+html body #MyBookmarks {
+  position:fixed!important;
+  top:12px!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:320px!important;
+  max-width:calc(100vw - 16px)!important;
+  height:auto!important;
+  max-height:calc(100vh - 24px)!important;
+  max-height:calc(100dvh - 24px)!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  z-index:1001!important;
+  border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:0 10px 10px 0!important;
+  background:var(--main-bg-pun,#f8f5f0)!important;
+  color:var(--primary-text,#354958)!important;
+  box-shadow:0 6px 24px rgb(0 0 0 / 15%)!important;
+  font:400 12px/1.5 var(--font-ui,Arial,sans-serif)!important;
+  text-align:left!important;
+}
+html body #MyBookmarks>:is(h1,h2) {
+  display:flex!important; align-items:center!important; gap:10px!important;
+  position:relative!important; float:none!important; width:100%!important;
+  min-height:52px!important; height:auto!important; margin:0!important; padding:10px 12px!important;
+  box-sizing:border-box!important; border:0!important; border-bottom:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:0!important; background:var(--pale-green,#efe8e1)!important; color:inherit!important;
+  font:600 16px/1.4 var(--font-body,Georgia,serif)!important; text-transform:none!important; letter-spacing:0!important;
+}
+html body #MyBookmarks>:is(h1,h2)::before,html body #MyBookmarks>:is(h1,h2)::after { content:none!important; display:none!important; }
+html body #MyBookmarks>:is(h1,h2)>span { display:block!important; position:static!important; min-width:0; width:auto!important; margin:0!important; padding:0!important; background:none!important; font:inherit!important; color:inherit!important; }
+html body #MyBookmarks>:is(h1,h2) strong { font:inherit!important; margin:0!important; }
+html body #MyBookmarks #bm2 {
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  position:static!important; flex:0 0 28px!important; width:28px!important; height:28px!important;
+  margin:0!important; padding:0!important; border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:6px!important; background:var(--main-bg-pun,#f8f5f0)!important; color:var(--teal,#456478)!important; cursor:pointer;
+}
+html body #MyBookmarks #bm2::before { content:"\f053"!important; position:static!important; display:block!important; margin:0!important; font:normal 14px/1 var(--fa,'FontAwesome')!important; transform:none!important; }
+html body #MyBookmarks #bm2::after { content:none!important; display:none!important; }
+html body #MyBookmarks>.container {
+  display:grid!important; grid-template-columns:28px 28px minmax(0,1fr)!important;
+  gap:8px!important; position:relative!important; width:100%!important; height:auto!important;
+  margin:0!important; padding:12px!important; border:0!important; border-radius:0!important;
+  background:none!important; box-sizing:border-box!important;
+}
+html body #MyBookmarks .scrl {
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  position:static!important; float:none!important; width:28px!important; height:28px!important;
+  margin:0!important; padding:0!important; transform:none!important; border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:6px!important; background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important;
+  box-shadow:none!important; text-shadow:none!important; cursor:pointer;
+}
+html body #MyBookmarks .scrl.t { grid-column:1; grid-row:1; }
+html body #MyBookmarks .scrl.b { grid-column:2; grid-row:1; }
+html body #MyBookmarks .scrl::before { content:"\f077"; font:normal 12px/1 var(--fa,'FontAwesome'); }
+html body #MyBookmarks .scrl.b::before { content:"\f078"; }
+html body #MyBookmarks .scrl>span { display:none!important; }
+html body #MyBookmarks inner {
+  display:block!important; grid-column:1/-1!important; position:relative!important;
+  width:100%!important; height:auto!important; max-height:calc(100vh - 140px)!important; max-height:calc(100dvh - 140px)!important;
+  margin:0!important; padding:0 2px 0 0!important; overflow:auto!important; box-sizing:border-box!important;
+  scrollbar-width:thin; scrollbar-color:var(--teal,#456478) transparent; overscroll-behavior:contain;
+}
+html body #MyBookmarks .BookmarkL {
+  position:relative!important; list-style:none!important; margin:0 0 8px!important; padding:10px!important;
+  border:1px solid var(--sage-green,#b2ada0)!important; border-radius:7px!important;
+  background:var(--pale-green,#efe8e1)!important; overflow-wrap:anywhere;
+}
+html body #MyBookmarks .BookmarkL:last-child { margin-bottom:0!important; }
+html body #MyBookmarks .BookmarkL>span {
+  display:grid!important; grid-template-columns:20px minmax(0,1fr) 24px!important; gap:6px!important;
+  position:relative!important; width:100%!important; margin:0!important; padding:0!important; box-sizing:border-box!important;
+  background:none!important; box-shadow:none!important; cursor:default;
+}
+html body #MyBookmarks .BookmarkL>span.last_click { border-left:2px solid var(--teal,#456478)!important; padding-left:6px!important; }
+html body #MyBookmarks .BookmarkL num { grid-column:1; grid-row:1; float:none!important; width:auto!important; margin:0!important; padding:3px 0!important; color:var(--teal,#456478)!important; }
+html body #MyBookmarks .BookmarkL>span>a { grid-column:2; grid-row:1; display:block!important; position:static!important; min-width:0!important; margin:0!important; padding:3px 0!important; color:inherit!important; font:500 11px/1.5 var(--font-ui,Arial,sans-serif)!important; text-decoration:none!important; }
+html body #MyBookmarks .BookmarkL>span>strong { grid-column:3; grid-row:1; display:flex!important; align-items:center; justify-content:center; position:static!important; float:none!important; width:24px!important; height:24px!important; margin:0!important; padding:0!important; border:0!important; border-radius:4px; background:none!important; color:var(--teal,#456478)!important; font:400 21px/1 Arial,sans-serif!important; cursor:pointer; }
+html body #MyBookmarks .BookmarkL>span>strong:hover { background:color-mix(in srgb,var(--orange,#be7044) 15%,transparent)!important; color:var(--orange,#be7044)!important; }
+html body #MyBookmarks .BookmarkL>span>dd,html body #MyBookmarks .BookmarkL>span:hover>dd {
+  display:block!important; grid-column:1/-1; position:static!important; width:auto!important;
+  margin:0!important; padding:6px 0 0!important; border:0!important; border-top:1px solid color-mix(in srgb,var(--sage-green,#b2ada0) 55%,transparent)!important;
+  visibility:visible!important; opacity:1!important; background:none!important; cursor:default;
+}
+html body #MyBookmarks .BookmarkL>span em { display:block!important; position:static!important; margin:0!important; padding:2px 0!important; border:0!important; border-radius:0!important; background:none!important; color:inherit!important; font:400 11px/1.5 var(--font-ui,Arial,sans-serif)!important; }
+html body #MyBookmarks .BookmarkL em.e1::before { content:none!important; display:none!important; }
+html body #MyBookmarks .BookmarkL em a { color:var(--teal,#456478)!important; text-decoration:none!important; font-weight:600; }
+html body #MyBookmarks a:hover { text-decoration:underline!important; }
+html body #MyBookmarks .deS { display:block; grid-column:1/-1; margin:0; padding:8px!important; color:inherit; }
+html body #MyBookmarks .deS::after { content:""; }
+html body #BookmCntToggle { position:fixed; top:12px; left:12px; width:30px!important; height:34px!important; box-sizing:border-box; z-index:1000; cursor:pointer; border:1px solid var(--sage-green,#b2ada0)!important; border-radius:6px; background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important; box-shadow:var(--light-shadow,0 2px 8px rgb(0 0 0 / 12%)); }
+html body #BookmCntToggle::before { content:"\f02e"; display:flex; align-items:center; justify-content:center; width:100%!important; height:100%!important; margin:0!important; background:none!important; font:normal 17px/1 var(--fa,'FontAwesome'); }
+html body #BookmCntToggle::after { content:none!important; display:none!important; }
+#pun .post .bookmark { width:24px; height:16px; right:-3px; z-index:20; background:var(--teal,#456478); color:var(--teal,#456478); opacity:.85; cursor:pointer; }
+#pun .post .bookmark::before { content:""; position:absolute; left:-8px; top:0; border-style:solid; border-width:8px 0 8px 8px; border-color:currentColor transparent; }
+#pun .post .bookmark.ncnfrm { color:var(--sage-green,#b2ada0); background:currentColor; }
+#pun .post .bookmark:hover { opacity:1; }
+html body .editBookmark { z-index:1002; right:0; top:30px; max-width:100%; border:1px solid var(--sage-green,#b2ada0); border-radius:8px; background:var(--main-bg-pun,#f8f5f0); color:var(--primary-text,#354958); box-shadow:var(--light-shadow,0 4px 16px rgb(0 0 0 / 15%)); overflow:hidden; }
+html body .editBookmark :is(h1,h2) { display:flex; gap:10px; align-items:center; margin:0!important; padding:10px 12px!important; background:var(--pale-green,#efe8e1)!important; font:600 14px/1.4 var(--font-ui,Arial,sans-serif)!important; text-transform:none; }
+html body .editBookmark .container { margin:0; padding:12px!important; background:none!important; }
+html body .editBookmark .inputfield { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+html body .editBookmark input[type=text] { flex:1 1 140px; width:100%; min-width:0; max-width:100%; box-sizing:border-box; }
+html body .editBookmark .button { padding:7px 12px; border:0; border-radius:5px; background:var(--midnight-gradient,linear-gradient(45deg,#354958,#526f98)); color:var(--white,#fff); cursor:pointer; }
+html body .editBookmark .delBookmark { margin-left:auto; order:2; font:400 21px/1 Arial,sans-serif; cursor:pointer; }
+.tipsy.bookmark { margin-left:-10px; }
+.tipsy.bookmark2 { margin-left:4px; }
+
 @media (max-width:800px) {
   .punbb-admin {
     width:auto;
@@ -544,9 +653,6 @@
       padding:calc(var(--space-0-8rem)*var(--forum-padding-density)) calc(var(--space-0rem)*var(--forum-padding-density)) calc(var(--space-0-2rem)*var(--forum-padding-density));
     }
 
-    #BookmCntToggle {
-      position:absolute!important;
-    }
   }
 
   @media screen and (max-width:540px) {
@@ -1362,10 +1468,6 @@
       margin:var(--space-0rem) var(--space-0rem) var(--space-1rem);
     }
 
-    [id="BookmCntToggle"] {
-      position:absolute!important;
-      top:10px!important;
-    }
 
     [id="title-logo-tr"] [id="title-logo-tdr"] {
       min-width:12rem;
@@ -8388,13 +8490,7 @@
     box-sizing:border-box!important;
   }
 
-  html body #MyBookmarks#MyBookmarks>h2 {
-    font-size:15px!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .bm-edit {
-    min-height:32px!important;
-  }
 
   #pun #pun-navlinks li#navpm span.num_msg {
     transform:translateY(3px)!important;
@@ -11986,63 +12082,15 @@
     padding:calc(var(--space-0px)*var(--forum-padding-density));
   }
 
-  [id="BookmCntToggle"] {
-    top:10px!important;
-    height:26px!important;
-    width:26px!important;
-    z-index:11!important;
-    opacity:0.85!important;
-    border-radius:var(--main-border-radius);
-  }
 
-  [id="BookmCntToggle"]:hover {
-    opacity:1!important;
-  }
 
-  [id="MyBookmarks"] {
-    margin-top:var(--space-50px);
-    height:auto!important;
-    min-height:150px;
-    max-height:500px;
-    border-radius:var(--radius-0px) var(--secondary-border-radius) var(--secondary-border-radius) var(--radius-0px);
-  }
 
-  [id="MyBookmarks"] .container {
-    margin-top:var(--space-2-6rem);
-  }
 
-  [id="MyBookmarks"] span.scrl.t,[id="MyBookmarks"] span.scrl.b {
-    top:-2rem!important;
-  }
 
-  [id="MyBookmarks"] inner {
-    margin-top:var(--space-2-4rem);
-    padding-top:calc(var(--space-0rem)*var(--forum-padding-density))!important;
-    max-height:400px;
-    overflow-x:hidden;
-    overflow-y:auto;
-  }
 
-  [id="pun"] .punbb [id="MyBookmarks"] h2,[id="pun"] .punbb [id="MyBookmarks"] h1 {
-    display:block;
-    margin:var(--space-0px) var(--space-0px) var(--space-4px)!important;
-    padding:calc(var(--space-6px)*var(--forum-padding-density)) calc(var(--space-20px)*var(--forum-padding-density)) calc(var(--space-6px)*var(--forum-padding-density)) calc(var(--space-4px)*var(--forum-padding-density));
-    font-size:1.1rem;
-    border-radius:var(--radius-0px) calc(var(--secondary-border-radius) - var(--radius-1px)) var(--radius-0px) var(--radius-0px);
-  }
 
-  [id="pun"] .punbb [id="MyBookmarks"] h2:before,[id="pun"] .punbb [id="MyBookmarks"] h1:before {
-    display:none;
-  }
 
-  [id="pun"] .punbb .editBookmark h1 {
-    display:block;
-    font-size:1.1rem;
-  }
 
-  [id="pun"] .punbb .editBookmark h1:before {
-    display:none;
-  }
 
   .reactions-root {
     margin-top:var(--space-1-2rem);
@@ -18229,8 +18277,8 @@
     --ui-radius:12px;
     --ui-section-gap:16px;
     --ui-select-radius:11px;
-    --bookmark-width:260px;
-    --bookmark-radius:16px;
+    
+    
     --partners-max-height:100px;
     --editor-button-min:34px;
   }
@@ -18427,7 +18475,7 @@
   #pun #pun-announcement {
     margin:var(--ui-section-gap)0!important;
     padding:0!important;
-    border-radius:var(--bookmark-radius)!important;
+    border-radius:16px!important;
     overflow:hidden;
   }
 
@@ -18566,123 +18614,23 @@
     border-radius:var(--radius-4px);
   }
 
-  #MyBookmarks {
-    width:var(--bookmark-width)!important;
-    max-width:calc(100vw - 16px)!important;
-    max-height:calc(100dvh - 24px);
-    border-radius:var(--bookmark-radius)!important;
-    box-sizing:border-box;
-    overflow:hidden;
-    font:400 12px/1.5 var(--font-ui);
-    z-index:999!important;
-  }
 
-  #MyBookmarks>h2 {
-    display:flex!important;
-    align-items:center;
-    gap:var(--ui-gap);
-    margin:0!important;
-    padding:var(--ui-padding)!important;
-    height:auto!important;
-    font:600 16px/1.4 var(--font-body)!important;
-    text-transform:none!important;
-  }
 
-  #MyBookmarks>h2>span {
-    margin:0!important;
-    padding:0!important;
-    font:inherit!important;
-  }
 
-  #MyBookmarks #bm2 {
-    display:block!important;
-    flex:0 0 24px;
-    cursor:pointer;
-  }
 
-  #MyBookmarks #bm2::before {
-    content:"\f053 ";
-    font:900 24px/1 var(--fa);
-  }
 
-  #MyBookmarks>.container {
-    position:relative;
-    padding:var(--ui-padding)!important;
-    margin:0!important;
-  }
 
-  #MyBookmarks inner {
-    display:block;
-    max-height:calc(100dvh - 140px);
-    overflow:auto;
-    scrollbar-width:thin;
-  }
 
-  #MyBookmarks .BookmarkL {
-    list-style:none;
-    margin:0 0 var(--ui-gap)!important;
-    padding:calc(var(--space-10px)*var(--forum-padding-density))!important;
-    border-radius:var(--ui-radius);
-    overflow-wrap:anywhere;
-  }
 
-  #MyBookmarks .last_click {
-    position:relative;
-    display:block;
-    padding-right:calc(var(--space-16px)*var(--forum-padding-density));
-  }
 
-  #MyBookmarks .last_click>strong {
-    position:absolute;
-    right:0;
-    top:0;
-    cursor:pointer;
-    font:500 18px/1 var(--font-ui);
-  }
 
-  #MyBookmarks .last_click>a {
-    text-decoration:none;
-  }
 
-  #MyBookmarks .bm-topic {
-    font-weight:600;
-  }
 
-  #MyBookmarks .bm-note {
-    font-size:11px;
-  }
 
-  #MyBookmarks .bm-edit {
-    display:inline-block;
-    margin-top:var(--ui-gap);
-    padding:calc(var(--space-5px)*var(--forum-padding-density)) calc(var(--space-8px)*var(--forum-padding-density));
-    border-radius:var(--radius-8px);
-    font:500 10px/1.4 var(--font-ui);
-    cursor:pointer;
-  }
 
-  #MyBookmarks .scrl {
-    align-items:center;
-    justify-content:center;
-    width:24px;
-    height:24px;
-    border-radius:var(--radius-8px);
-    cursor:pointer;
-    margin-bottom:var(--ui-gap);
-  }
 
-  #MyBookmarks .scrl::before {
-    content:"\f077 ";
-    font:900 20px/1 var(--fa);
-  }
 
-  #MyBookmarks .scrl.b::before {
-    content:"\f078 ";
-  }
 
-  #MyBookmarks .scrl>span {
-    display:none!important;
-  }
 
   #pun .partners {
     display:flex!important;
@@ -18717,60 +18665,19 @@
   }
 
   :root {
-    --bookmark-control-size:28px;
-    --bookmark-control-gap:8px;
+    
+    
     --scroll-button-size:40px;
     --scroll-button-offset:18px;
     --scroll-button-gap:8px;
     --category-description-gap:12px;
   }
 
-  #MyBookmarks>h2 {
-    overflow:visible!important;
-    min-height:48px;
-    box-sizing:border-box;
-  }
 
-  #MyBookmarks #bm2 {
-    position:relative!important;
-    flex:0 0 var(--bookmark-control-size)!important;
-    width:var(--bookmark-control-size)!important;
-    min-width:var(--bookmark-control-size)!important;
-    height:var(--bookmark-control-size)!important;
-  }
 
-  #MyBookmarks #bm2::before {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    height:100%;
-    font:900 24px/1 var(--fa)!important;
-  }
 
-  #MyBookmarks>.container {
-    padding-top:calc(var(--space-10px)*var(--forum-padding-density))!important;
-  }
 
-  #MyBookmarks .scrl {
-    position:relative!important;
-    top:auto!important;
-    bottom:auto!important;
-    left:auto!important;
-    right:auto!important;
-    float:none!important;
-    display:inline-flex!important;
-    width:var(--bookmark-control-size)!important;
-    height:var(--bookmark-control-size)!important;
-    margin:0 var(--bookmark-control-gap) var(--bookmark-control-gap)0!important;
-    transform:none!important;
-    vertical-align:middle;
-    z-index:1;
-  }
 
-  #MyBookmarks inner {
-    clear:both;
-  }
 
   #pun #pun-index .catDescr {
     display:block!important;
@@ -20505,95 +20412,17 @@
   }
 
   :root {
-    --bookmark-heading-size:20px;
-    --bookmark-heading-padding:12px;
-    --bookmark-heading-icon-size:26px;
+    
+    
+    
   }
 
-  #MyBookmarks>:is(h1,h2),#pun #MyBookmarks>:is(h1,h2) {
-    display:flex!important;
-    align-items:center!important;
-    justify-content:flex-start!important;
-    gap:var(--space-8px)!important;
-    width:100%!important;
-    min-width:0!important;
-    height:auto!important;
-    min-height:48px!important;
-    margin:0!important;
-    padding:calc(var(--bookmark-heading-padding)*var(--forum-padding-density))!important;
-    border-radius:0!important;
-    font:600 var(--bookmark-heading-size)/1.35 var(--font-body)!important;
-    text-transform:none!important;
-    letter-spacing:0!important;
-    overflow:visible!important;
-    box-sizing:border-box;
-  }
 
-  #MyBookmarks>:is(h1,h2)::before,#MyBookmarks>:is(h1,h2)::after {
-    content:none!important;
-    display:none!important;
-  }
 
-  #MyBookmarks>:is(h1,h2)>span,#pun #MyBookmarks>:is(h1,h2)>span {
-    display:block!important;
-    position:static!important;
-    float:none!important;
-    min-width:0!important;
-    width:auto!important;
-    height:auto!important;
-    margin:0!important;
-    padding:0!important;
-    font:inherit!important;
-    text-transform:none!important;
-    white-space:normal!important;
-    overflow-wrap:anywhere;
-    transform:none!important;
-  }
 
-  #MyBookmarks>:is(h1,h2) strong {
-    font:inherit!important;
-    margin:0!important;
-  }
 
-  #MyBookmarks #bm2,#pun #MyBookmarks #bm2 {
-    display:flex!important;
-    align-items:center;
-    justify-content:center;
-    position:static!important;
-    flex:0 0 28px!important;
-    width:28px!important;
-    min-width:28px!important;
-    height:28px!important;
-    margin:0!important;
-    padding:0!important;
-    overflow:visible!important;
-    clip-path:none!important;
-    font-size:0!important;
-    transform:none!important;
-  }
 
-  #MyBookmarks #bm2::before,#pun #MyBookmarks #bm2::before {
-    content:"\f053 "!important;
-    display:block!important;
-    position:static!important;
-    width:auto!important;
-    height:auto!important;
-    margin:0!important;
-    padding:0!important;
-    font-family:var(--fa)!important;
-    font-size:var(--bookmark-heading-icon-size)!important;
-    font-weight:900!important;
-    font-style:normal!important;
-    line-height:1!important;
-    letter-spacing:normal!important;
-    text-transform:none!important;
-    transform:none!important;
-  }
 
-  #MyBookmarks #bm2::after {
-    content:none!important;
-    display:none!important;
-  }
 
   #pun #pun-stats :is(.onlinelist,.users_24h) div>span:has(>a[href*="profile.php"]) {
     display:flex!important;
@@ -23160,8 +22989,7 @@
     padding-right:5px!important;
     box-sizing:border-box!important;
   }
-
-  #pun a:hover,#MyBookmarks a:hover,.world-drawer a:hover {
+#pun a:hover,.world-drawer a:hover {
     text-decoration:none!important;
   }
 
@@ -23363,128 +23191,23 @@
     }
   }
 
-  html body #MyBookmarks#MyBookmarks {
-    width:var(--bookmark-width,240px)!important;
-    max-width:calc(100vw - 16px)!important;
-    max-height:calc(100dvh - 24px)!important;
-    border-radius:var(--bookmark-radius,12px)!important;
-    box-sizing:border-box!important;
-    overflow:hidden!important;
-    font:400 12px/1.5 var(--font-ui)!important;
-    z-index:999!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2 {
-    display:flex!important;
-    align-items:center!important;
-    gap:8px!important;
-    margin:0!important;
-    padding:12px!important;
-    height:auto!important;
-    font:600 16px/1.4 var(--font-body)!important;
-    text-transform:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2>span {
-    margin:0!important;
-    padding:0!important;
-    font:inherit!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2 {
-    position:static!important;
-    display:block!important;
-    flex:0 0 24px!important;
-    width:24px!important;
-    height:24px!important;
-    margin:0!important;
-    cursor:pointer;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2::before {
-    content:"\f053 "!important;
-    font:900 24px/1 var(--fa)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>.container {
-    position:relative!important;
-    padding:12px!important;
-    margin:0!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks inner {
-    display:block!important;
-    max-height:calc(100dvh - 140px)!important;
-    overflow:auto!important;
-    scrollbar-width:thin;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL {
-    list-style:none!important;
-    margin:0 0 8px!important;
-    padding:10px!important;
-    border-radius:8px!important;
-    overflow-wrap:anywhere!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL>span {
-    position:relative!important;
-    display:block!important;
-    padding-right:18px!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL>span>strong {
-    position:absolute!important;
-    right:0!important;
-    top:0!important;
-    cursor:pointer;
-    font:500 20px/1 var(--font-ui)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL a {
-    text-decoration:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .bm-topic {
-    font-weight:600!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks :is(.bm-note,.bm-details) {
-    font-size:11px!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .bm-edit {
-    display:inline-block!important;
-    margin-top:8px!important;
-    padding:5px 8px!important;
-    border-radius:6px!important;
-    font:500 10px/1.4 var(--font-ui)!important;
-    cursor:pointer;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl {
-    display:inline-flex!important;
-    align-items:center!important;
-    justify-content:center!important;
-    width:24px!important;
-    height:24px!important;
-    border-radius:6px!important;
-    cursor:pointer;
-    margin-bottom:8px!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl::before {
-    content:"\f077 "!important;
-    font:900 20px/1 var(--fa)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl.b::before {
-    content:"\f078 "!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl>span {
-    display:none!important;
-  }
 
   #pun #pun-viewtopic .post .post-author .pa-author::after,#pun #pun-viewtopic .post .post-author.online>ul::after {
     content:none!important;
@@ -25463,3 +25186,4 @@ html body td[id="button-graffiti_rusff"],
     white-space:normal!important;
   }
 }
+
