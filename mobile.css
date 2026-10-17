@@ -25445,3 +25445,21 @@ html body td[id="button-graffiti_rusff"],
   padding:0!important;
   margin:0!important;
 }
+
+/* Align the unread-post badge with the topic card's left inset on mobile. */
+@media (max-width:800px) {
+  #pun#pun :is(#pun-viewforum,#pun-searchtopics,#pun-viewtopic) .forum .tcl .newtext {
+    display:table!important;
+    position:relative!important;
+    left:-30px!important;
+    margin:6px 0 0!important;
+    width:max-content!important;
+    max-width:calc(100% + 30px)!important;
+    text-align:left!important;
+    float:none!important;
+  }
+  #pun#pun :is(#pun-viewforum,#pun-searchtopics,#pun-viewtopic) .forum .tcl .newtext>a {
+    justify-content:flex-start!important;
+    white-space:normal!important;
+  }
+}
