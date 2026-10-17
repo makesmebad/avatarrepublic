@@ -12846,22 +12846,39 @@ html body td[id="button-graffiti_rusff"],
   font-weight:900!important;
 }
 
-/* Slide a continuous gradient smoothly across post action buttons. */
+/* Crossfade static gradients without moving or resizing the button background. */
 #pun#pun#pun .postlink>span>a {
   display:inline-flex;
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden!important;
   color:var(--white)!important;
-  background-color:var(--teal)!important;
-  background-image:linear-gradient(110deg,var(--teal) 0%,var(--slate-blue) 35%,var(--teal) 70%,var(--slate-blue) 100%)!important;
-  background-size:250% 100%!important;
+  background:var(--midnight-gradient)!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
   background-repeat:no-repeat!important;
-  background-position:0% 50%!important;
-  background-origin:border-box!important;
-  background-clip:border-box!important;
-  transition:background-position .6s ease-in-out!important;
+  transition:color .3s ease!important;
+}
+#pun#pun#pun .postlink>span>a::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  border-radius:inherit;
+  background:linear-gradient(110deg,var(--teal),var(--slate-blue));
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .35s ease;
+}
+#pun#pun#pun .postlink>span>a:hover::after {
+  opacity:1;
 }
 #pun#pun#pun .postlink>span>a:hover {
-  background-position:100% 50%!important;
+  background:var(--midnight-gradient)!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
   color:var(--white)!important;
 }
+
 
 
