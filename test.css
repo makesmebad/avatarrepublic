@@ -174,6 +174,115 @@
   --image-forum-desc:url(https://forumstatic.ru/files/001c/25/f9/57122.webp?v=1);
 }
 
+/* Bookmarks: shared appearance for desktop and mobile. */
+html body #MyBookmarks {
+  position:fixed!important;
+  top:12px!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:320px!important;
+  max-width:calc(100vw - 16px)!important;
+  height:auto!important;
+  max-height:calc(100vh - 24px)!important;
+  max-height:calc(100dvh - 24px)!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  z-index:1001!important;
+  border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:0 10px 10px 0!important;
+  background:var(--main-bg-pun,#f8f5f0)!important;
+  color:var(--primary-text,#354958)!important;
+  box-shadow:0 6px 24px rgb(0 0 0 / 15%)!important;
+  font:400 12px/1.5 var(--font-ui,Arial,sans-serif)!important;
+  text-align:left!important;
+}
+html body #MyBookmarks>:is(h1,h2) {
+  display:flex!important; align-items:center!important; gap:10px!important;
+  position:relative!important; float:none!important; width:100%!important;
+  min-height:52px!important; height:auto!important; margin:0!important; padding:10px 12px!important;
+  box-sizing:border-box!important; border:0!important; border-bottom:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:0!important; background:var(--pale-green,#efe8e1)!important; color:inherit!important;
+  font:600 16px/1.4 var(--font-body,Georgia,serif)!important; text-transform:none!important; letter-spacing:0!important;
+}
+html body #MyBookmarks>:is(h1,h2)::before,html body #MyBookmarks>:is(h1,h2)::after { content:none!important; display:none!important; }
+html body #MyBookmarks>:is(h1,h2)>span { display:block!important; position:static!important; min-width:0; width:auto!important; margin:0!important; padding:0!important; background:none!important; font:inherit!important; color:inherit!important; }
+html body #MyBookmarks>:is(h1,h2) strong { font:inherit!important; margin:0!important; }
+html body #MyBookmarks #bm2 {
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  position:static!important; flex:0 0 28px!important; width:28px!important; height:28px!important;
+  margin:0!important; padding:0!important; border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:6px!important; background:var(--main-bg-pun,#f8f5f0)!important; color:var(--teal,#456478)!important; cursor:pointer;
+}
+html body #MyBookmarks #bm2::before { content:"\f053"!important; position:static!important; display:block!important; margin:0!important; font:normal 14px/1 var(--fa,'FontAwesome')!important; transform:none!important; }
+html body #MyBookmarks #bm2::after { content:none!important; display:none!important; }
+html body #MyBookmarks>.container {
+  display:grid!important; grid-template-columns:28px 28px minmax(0,1fr)!important;
+  gap:8px!important; position:relative!important; width:100%!important; height:auto!important;
+  margin:0!important; padding:12px!important; border:0!important; border-radius:0!important;
+  background:none!important; box-sizing:border-box!important;
+}
+html body #MyBookmarks .scrl {
+  display:flex!important; align-items:center!important; justify-content:center!important;
+  position:static!important; float:none!important; width:28px!important; height:28px!important;
+  margin:0!important; padding:0!important; transform:none!important; border:1px solid var(--sage-green,#b2ada0)!important;
+  border-radius:6px!important; background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important;
+  box-shadow:none!important; text-shadow:none!important; cursor:pointer;
+}
+html body #MyBookmarks .scrl.t { grid-column:1; grid-row:1; }
+html body #MyBookmarks .scrl.b { grid-column:2; grid-row:1; }
+html body #MyBookmarks .scrl::before { content:"\f077"; font:normal 12px/1 var(--fa,'FontAwesome'); }
+html body #MyBookmarks .scrl.b::before { content:"\f078"; }
+html body #MyBookmarks .scrl>span { display:none!important; }
+html body #MyBookmarks inner {
+  display:block!important; grid-column:1/-1!important; position:relative!important;
+  width:100%!important; height:auto!important; max-height:calc(100vh - 140px)!important; max-height:calc(100dvh - 140px)!important;
+  margin:0!important; padding:0 2px 0 0!important; overflow:auto!important; box-sizing:border-box!important;
+  scrollbar-width:thin; scrollbar-color:var(--teal,#456478) transparent; overscroll-behavior:contain;
+}
+html body #MyBookmarks .BookmarkL {
+  position:relative!important; list-style:none!important; margin:0 0 8px!important; padding:10px!important;
+  border:1px solid var(--sage-green,#b2ada0)!important; border-radius:7px!important;
+  background:var(--pale-green,#efe8e1)!important; overflow-wrap:anywhere;
+}
+html body #MyBookmarks .BookmarkL:last-child { margin-bottom:0!important; }
+html body #MyBookmarks .BookmarkL>span {
+  display:grid!important; grid-template-columns:20px minmax(0,1fr) 24px!important; gap:6px!important;
+  position:relative!important; width:100%!important; margin:0!important; padding:0!important; box-sizing:border-box!important;
+  background:none!important; box-shadow:none!important; cursor:default;
+}
+html body #MyBookmarks .BookmarkL>span.last_click { border-left:2px solid var(--teal,#456478)!important; padding-left:6px!important; }
+html body #MyBookmarks .BookmarkL num { grid-column:1; grid-row:1; float:none!important; width:auto!important; margin:0!important; padding:3px 0!important; color:var(--teal,#456478)!important; }
+html body #MyBookmarks .BookmarkL>span>a { grid-column:2; grid-row:1; display:block!important; position:static!important; min-width:0!important; margin:0!important; padding:3px 0!important; color:inherit!important; font:500 11px/1.5 var(--font-ui,Arial,sans-serif)!important; text-decoration:none!important; }
+html body #MyBookmarks .BookmarkL>span>strong { grid-column:3; grid-row:1; display:flex!important; align-items:center; justify-content:center; position:static!important; float:none!important; width:24px!important; height:24px!important; margin:0!important; padding:0!important; border:0!important; border-radius:4px; background:none!important; color:var(--teal,#456478)!important; font:400 21px/1 Arial,sans-serif!important; cursor:pointer; }
+html body #MyBookmarks .BookmarkL>span>strong:hover { background:color-mix(in srgb,var(--orange,#be7044) 15%,transparent)!important; color:var(--orange,#be7044)!important; }
+html body #MyBookmarks .BookmarkL>span>dd,html body #MyBookmarks .BookmarkL>span:hover>dd {
+  display:block!important; grid-column:1/-1; position:static!important; width:auto!important;
+  margin:0!important; padding:6px 0 0!important; border:0!important; border-top:1px solid color-mix(in srgb,var(--sage-green,#b2ada0) 55%,transparent)!important;
+  visibility:visible!important; opacity:1!important; background:none!important; cursor:default;
+}
+html body #MyBookmarks .BookmarkL>span em { display:block!important; position:static!important; margin:0!important; padding:2px 0!important; border:0!important; border-radius:0!important; background:none!important; color:inherit!important; font:400 11px/1.5 var(--font-ui,Arial,sans-serif)!important; }
+html body #MyBookmarks .BookmarkL em.e1::before { content:none!important; display:none!important; }
+html body #MyBookmarks .BookmarkL em a { color:var(--teal,#456478)!important; text-decoration:none!important; font-weight:600; }
+html body #MyBookmarks a:hover { text-decoration:underline!important; }
+html body #MyBookmarks .deS { display:block; grid-column:1/-1; margin:0; padding:8px!important; color:inherit; }
+html body #MyBookmarks .deS::after { content:""; }
+html body #BookmCntToggle { position:fixed; top:12px; left:12px; width:30px!important; height:34px!important; box-sizing:border-box; z-index:1000; cursor:pointer; border:1px solid var(--sage-green,#b2ada0)!important; border-radius:6px; background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important; box-shadow:var(--light-shadow,0 2px 8px rgb(0 0 0 / 12%)); }
+html body #BookmCntToggle::before { content:"\f02e"; display:flex; align-items:center; justify-content:center; width:100%!important; height:100%!important; margin:0!important; background:none!important; font:normal 17px/1 var(--fa,'FontAwesome'); }
+html body #BookmCntToggle::after { content:none!important; display:none!important; }
+#pun .post .bookmark { width:24px; height:16px; right:-3px; z-index:20; background:var(--teal,#456478); color:var(--teal,#456478); opacity:.85; cursor:pointer; }
+#pun .post .bookmark::before { content:""; position:absolute; left:-8px; top:0; border-style:solid; border-width:8px 0 8px 8px; border-color:currentColor transparent; }
+#pun .post .bookmark.ncnfrm { color:var(--sage-green,#b2ada0); background:currentColor; }
+#pun .post .bookmark:hover { opacity:1; }
+html body .editBookmark { z-index:1002; right:0; top:30px; max-width:100%; border:1px solid var(--sage-green,#b2ada0); border-radius:8px; background:var(--main-bg-pun,#f8f5f0); color:var(--primary-text,#354958); box-shadow:var(--light-shadow,0 4px 16px rgb(0 0 0 / 15%)); overflow:hidden; }
+html body .editBookmark :is(h1,h2) { display:flex; gap:10px; align-items:center; margin:0!important; padding:10px 12px!important; background:var(--pale-green,#efe8e1)!important; font:600 14px/1.4 var(--font-ui,Arial,sans-serif)!important; text-transform:none; }
+html body .editBookmark .container { margin:0; padding:12px!important; background:none!important; }
+html body .editBookmark .inputfield { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+html body .editBookmark input[type=text] { flex:1 1 140px; width:100%; min-width:0; max-width:100%; box-sizing:border-box; }
+html body .editBookmark .button { padding:7px 12px; border:0; border-radius:5px; background:var(--midnight-gradient,linear-gradient(45deg,#354958,#526f98)); color:var(--white,#fff); cursor:pointer; }
+html body .editBookmark .delBookmark { margin-left:auto; order:2; font:400 21px/1 Arial,sans-serif; cursor:pointer; }
+.tipsy.bookmark { margin-left:-10px; }
+.tipsy.bookmark2 { margin-left:4px; }
+
 @media (width > 800px) {
   html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,h7,h8,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     border:0;
@@ -848,29 +957,9 @@
     background-color:var(--main-bg-pun)!important;
   }
 
-  [id="BookmCntToggle"] {
-    color:var(--links-hover-color)!important;
-    border:1px solid var(--links-hover-color);
-    box-shadow:none!important;
-    background-color:var(--main-bg-pun)!important;
-  }
 
-  [id="MyBookmarks"] {
-    border:1px solid var(--secondary-border-color);
-    border-left-width:0px;
-    box-shadow:none!important;
-    background-color:var(--main-bg-pun);
-  }
 
-  [id="pun"] .punbb [id="MyBookmarks"] h2,[id="pun"] .punbb [id="MyBookmarks"] h1 {
-    color:var(--lighter-text);
-    border-width:0px;
-    background-color:var(--main-bg-body);
-  }
 
-  .editBookmark {
-    background-color:var(--main-bg-pun);
-  }
 
   [id="pun"] .post-body .emoji-mart {
     border:1px solid var(--secondary-border-color);
@@ -3368,66 +3457,18 @@
     color:var(--slate-blue)!important;
   }
 
-  #MyBookmarks {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue);
-  }
 
-  #MyBookmarks>h2 {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  #MyBookmarks>h2>span {
-    color:inherit!important;
-  }
 
-  #MyBookmarks #bm2::before {
-    color:var(--teal);
-  }
 
-  #MyBookmarks>.container {
-    border:0!important;
-    background:none!important;
-  }
 
-  #MyBookmarks inner {
-    scrollbar-color:var(--teal) var(--pale-green);
-  }
 
-  #MyBookmarks .BookmarkL {
-    border:1px solid var(--sage-green);
-    background:var(--pale-green);
-  }
 
-  #MyBookmarks .last_click>strong {
-    color:var(--orange);
-  }
 
-  #MyBookmarks num {
-    color:var(--teal);
-  }
 
-  #MyBookmarks .last_click>a {
-    color:var(--slate-blue)!important;
-  }
 
-  #MyBookmarks .bm-note {
-    color:var(--teal);
-  }
 
-  #MyBookmarks .bm-edit {
-    border:1px solid var(--sage-green);
-    background:var(--white);
-    color:var(--slate-blue);
-  }
 
-  #MyBookmarks .scrl {
-    background:var(--pale-green);
-    color:var(--teal);
-  }
 
   #pun .partners {
     border:1px solid var(--sage-green);
@@ -3999,34 +4040,10 @@
     border-top:0!important;
   }
 
-  #MyBookmarks>:is(h1,h2),#pun #MyBookmarks>:is(h1,h2) {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-    text-shadow:none!important;
-  }
 
-  #MyBookmarks>:is(h1,h2)>span,#pun #MyBookmarks>:is(h1,h2)>span {
-    background:none!important;
-    border:0!important;
-    color:inherit!important;
-  }
 
-  #MyBookmarks>:is(h1,h2) strong {
-    color:inherit!important;
-  }
 
-  #MyBookmarks #bm2,#pun #MyBookmarks #bm2 {
-    border:0!important;
-    background:none!important;
-    color:var(--teal);
-  }
 
-  #MyBookmarks #bm2::before,#pun #MyBookmarks #bm2::before {
-    border:0!important;
-    background:none!important;
-    color:var(--teal)!important;
-  }
 
   #forum-tooltip {
     border:1px solid var(--sage-green);
@@ -4897,8 +4914,7 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
   #pun #pun-userlist .username .user-avatar.no-avatar .avatar-image::after {
     color:var(--lastpost-avatar-surface)!important;
   }
-
-  #pun a,#MyBookmarks a,.world-drawer a {
+#pun a,.world-drawer a {
     text-shadow:none!important;
   }
 
@@ -4992,70 +5008,19 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     color:var(--teal)!important;
   }
 
-  html body #MyBookmarks#MyBookmarks {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2 {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2>span {
-    color:inherit!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2 {
-    background:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2::before {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>.container {
-    border:0!important;
-    background:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks inner {
-    scrollbar-color:var(--teal) var(--pale-green);
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL {
-    border:1px solid var(--sage-green)!important;
-    background:var(--pale-green)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL>span>strong {
-    color:var(--orange)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks num {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL a {
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks :is(.bm-note,.bm-details) {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .bm-edit {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl {
-    background:var(--pale-green)!important;
-    color:var(--teal)!important;
-  }
 
   #pun .post-content .spoiler-box>div:first-child {
     background-image:none!important;
@@ -7427,29 +7392,9 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     background-color:var(--main-bg-pun)!important;
   }
 
-  [id="BookmCntToggle"] {
-    color:var(--links-hover-color)!important;
-    border:1px solid var(--links-hover-color);
-    box-shadow:none!important;
-    background-color:var(--main-bg-pun)!important;
-  }
 
-  [id="MyBookmarks"] {
-    border:1px solid var(--secondary-border-color);
-    border-left-width:0px;
-    box-shadow:none!important;
-    background-color:var(--main-bg-pun);
-  }
 
-  [id="pun"] .punbb [id="MyBookmarks"] h2,[id="pun"] .punbb [id="MyBookmarks"] h1 {
-    color:var(--lighter-text);
-    border-width:0px;
-    background-color:var(--main-bg-body);
-  }
 
-  .editBookmark {
-    background-color:var(--main-bg-pun);
-  }
 
   [id="pun"] .post-body .emoji-mart {
     border:1px solid var(--secondary-border-color);
@@ -9946,66 +9891,18 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     color:var(--slate-blue)!important;
   }
 
-  #MyBookmarks {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue);
-  }
 
-  #MyBookmarks>h2 {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  #MyBookmarks>h2>span {
-    color:inherit!important;
-  }
 
-  #MyBookmarks #bm2::before {
-    color:var(--teal);
-  }
 
-  #MyBookmarks>.container {
-    border:0!important;
-    background:none!important;
-  }
 
-  #MyBookmarks inner {
-    scrollbar-color:var(--teal) var(--pale-green);
-  }
 
-  #MyBookmarks .BookmarkL {
-    border:1px solid var(--sage-green);
-    background:var(--pale-green);
-  }
 
-  #MyBookmarks .last_click>strong {
-    color:var(--orange);
-  }
 
-  #MyBookmarks num {
-    color:var(--teal);
-  }
 
-  #MyBookmarks .last_click>a {
-    color:var(--slate-blue)!important;
-  }
 
-  #MyBookmarks .bm-note {
-    color:var(--teal);
-  }
 
-  #MyBookmarks .bm-edit {
-    border:1px solid var(--sage-green);
-    background:var(--white);
-    color:var(--slate-blue);
-  }
 
-  #MyBookmarks .scrl {
-    background:var(--pale-green);
-    color:var(--teal);
-  }
 
   #pun .partners {
     border:1px solid var(--sage-green);
@@ -10602,34 +10499,10 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     border-top:0!important;
   }
 
-  #MyBookmarks>:is(h1,h2),#pun #MyBookmarks>:is(h1,h2) {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-    text-shadow:none!important;
-  }
 
-  #MyBookmarks>:is(h1,h2)>span,#pun #MyBookmarks>:is(h1,h2)>span {
-    background:none!important;
-    border:0!important;
-    color:inherit!important;
-  }
 
-  #MyBookmarks>:is(h1,h2) strong {
-    color:inherit!important;
-  }
 
-  #MyBookmarks #bm2,#pun #MyBookmarks #bm2 {
-    border:0!important;
-    background:none!important;
-    color:var(--teal);
-  }
 
-  #MyBookmarks #bm2::before,#pun #MyBookmarks #bm2::before {
-    border:0!important;
-    background:none!important;
-    color:var(--teal)!important;
-  }
 
   #forum-tooltip {
     border:1px solid var(--sage-green);
@@ -11339,8 +11212,7 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
   #pun #pun-userlist .username .user-avatar.no-avatar .avatar-image::after {
     color:var(--lastpost-avatar-surface)!important;
   }
-
-  #pun a,#MyBookmarks a,.world-drawer a {
+#pun a,.world-drawer a {
     text-shadow:none!important;
   }
 
@@ -11434,70 +11306,19 @@ color-mix(in srgb, var(--white) 80%, transparent) 85%), var(--image-forum-desc) 
     color:var(--teal)!important;
   }
 
-  html body #MyBookmarks#MyBookmarks {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2 {
-    border:0!important;
-    background:var(--sage-green)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>h2>span {
-    color:inherit!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2 {
-    background:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks #bm2::before {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks>.container {
-    border:0!important;
-    background:none!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks inner {
-    scrollbar-color:var(--teal) var(--pale-green);
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL {
-    border:1px solid var(--sage-green)!important;
-    background:var(--pale-green)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL>span>strong {
-    color:var(--orange)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks num {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .BookmarkL a {
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks :is(.bm-note,.bm-details) {
-    color:var(--teal)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .bm-edit {
-    border:1px solid var(--sage-green)!important;
-    background:var(--white)!important;
-    color:var(--slate-blue)!important;
-  }
 
-  html body #MyBookmarks#MyBookmarks .scrl {
-    background:var(--pale-green)!important;
-    color:var(--teal)!important;
-  }
 
   #pun .post-content .spoiler-box>div:first-child {
     background-image:none!important;
@@ -13176,3 +12997,4 @@ html body td[id="button-graffiti_rusff"],
   padding:0!important;
   margin:0!important;
 }
+
