@@ -25110,6 +25110,8 @@
 }
 
 /* Rusff may insert these controls outside the standard editor toolbar. */
+html body #pun #form-buttons #button-files_rusff,
+html body #pun #form-buttons #button-graffiti_rusff,
 html body td[id="button-files_rusff"],
 html body td[id="button-graffiti_rusff"],
 #pun#pun#pun :is(#button-files_rusff,#button-graffiti_rusff) {
