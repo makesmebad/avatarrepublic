@@ -25137,21 +25137,22 @@ html body td[id="button-graffiti_rusff"],
   font-weight:900!important;
 }
 
-/* Match post action buttons to the edit-button gradient hover. */
+/* Slide a continuous gradient smoothly across post action buttons. */
 #pun#pun#pun .postlink>span>a {
   display:inline-flex;
   color:var(--white)!important;
-  background:var(--midnight-gradient),linear-gradient(var(--teal),var(--teal))!important;
-  background-size:100% 100%,100% 100%!important;
+  background-color:var(--teal)!important;
+  background-image:linear-gradient(110deg,var(--teal) 0%,var(--slate-blue) 35%,var(--teal) 70%,var(--slate-blue) 100%)!important;
+  background-size:250% 100%!important;
   background-repeat:no-repeat!important;
-  background-position:0 0,0 0!important;
+  background-position:0% 50%!important;
   background-origin:border-box!important;
   background-clip:border-box!important;
-  transition:background-size .3s ease,color .3s ease!important;
+  transition:background-position .6s ease-in-out!important;
 }
 #pun#pun#pun .postlink>span>a:hover {
-  background:var(--midnight-gradient),linear-gradient(var(--teal),var(--teal))!important;
-  background-size:0% 100%,100% 100%!important;
+  background-position:100% 50%!important;
   color:var(--white)!important;
 }
+
 
