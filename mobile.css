@@ -92,9 +92,22 @@ html body #MyBookmarks .BookmarkL em a { color:var(--teal,#456478)!important; te
 html body #MyBookmarks a:hover { text-decoration:underline!important; }
 html body #MyBookmarks .deS { display:block; grid-column:1/-1; margin:0; padding:8px!important; color:inherit; }
 html body #MyBookmarks .deS::after { content:""; }
-html body #BookmCntToggle { position:fixed; top:12px; left:12px; width:30px!important; height:34px!important; box-sizing:border-box; z-index:1000; cursor:pointer; border:1px solid var(--sage-green,#b2ada0)!important; border-radius:6px; background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important; box-shadow:var(--light-shadow,0 2px 8px rgb(0 0 0 / 12%)); }
-html body #BookmCntToggle::before { content:"\f02e"; display:flex; align-items:center; justify-content:center; width:100%!important; height:100%!important; margin:0!important; background:none!important; font:normal 17px/1 var(--fa,'FontAwesome'); }
-html body #BookmCntToggle::after { content:none!important; display:none!important; }
+html body #BookmCntToggle#BookmCntToggle {
+  display:block!important; position:fixed!important; top:12px!important; left:12px!important;
+  width:30px!important; height:34px!important; padding:0!important; margin:0!important;
+  box-sizing:border-box!important; z-index:1000; cursor:pointer; overflow:hidden;
+  border:1px solid var(--sage-green,#b2ada0)!important; border-radius:6px!important;
+  background:var(--pale-green,#efe8e1)!important; color:var(--teal,#456478)!important;
+  box-shadow:var(--light-shadow,0 2px 8px rgb(0 0 0 / 12%))!important;
+  opacity:1!important; font-size:0!important; line-height:0!important;
+}
+html body #BookmCntToggle#BookmCntToggle::before {
+  content:"\f02e"!important; display:flex!important; position:absolute!important; inset:0!important;
+  align-items:center!important; justify-content:center!important; width:100%!important; height:100%!important;
+  padding:0!important; margin:0!important; border:0!important; background:none!important;
+  font:normal 17px/1 var(--fa,'FontAwesome')!important; transform:none!important;
+}
+html body #BookmCntToggle#BookmCntToggle::after { content:none!important; display:none!important; }
 #pun .post .bookmark { width:24px; height:16px; right:-3px; z-index:20; background:var(--teal,#456478); color:var(--teal,#456478); opacity:.85; cursor:pointer; }
 #pun .post .bookmark::before { content:""; position:absolute; left:-8px; top:0; border-style:solid; border-width:8px 0 8px 8px; border-color:currentColor transparent; }
 #pun .post .bookmark.ncnfrm { color:var(--sage-green,#b2ada0); background:currentColor; }
