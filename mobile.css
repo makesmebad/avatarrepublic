@@ -25173,3 +25173,103 @@ html body td[id="button-graffiti_rusff"],
 
 
 
+
+/* Forum moderation: one coherent table on desktop, topic cards on mobile. */
+#pun#pun #pun-modviewforum #pun-main .forum>.container {
+  padding:0!important;
+  border:1px solid var(--sage-green)!important;
+  border-radius:10px!important;
+  background:var(--pale-green)!important;
+  overflow:hidden!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum table {
+  display:table!important;
+  width:100%!important;
+  table-layout:fixed!important;
+  border-collapse:collapse!important;
+  border-spacing:0!important;
+  margin:0!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum :is(th,td) {
+  float:none!important;
+  position:static!important;
+  margin:0!important;
+  padding:12px!important;
+  border-radius:0!important;
+  box-sizing:border-box!important;
+  vertical-align:middle!important;
+  word-break:normal!important;
+  overflow-wrap:anywhere;
+}
+#pun#pun #pun-modviewforum #pun-main .forum th {
+  display:table-cell!important;
+  background:var(--teal)!important;
+  color:var(--white)!important;
+  font:600 12px/1.4 var(--font-ui,Arial,sans-serif)!important;
+  overflow-wrap:normal!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum td {
+  display:table-cell!important;
+  background:transparent!important;
+  border-bottom:1px solid var(--sage-green)!important;
+  color:var(--primary-text)!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum :is(.tc2,.tc3) { width:100px!important; text-align:center!important; }
+#pun#pun #pun-modviewforum #pun-main .forum .tcr { width:240px!important; text-align:left!important; }
+#pun#pun #pun-modviewforum #pun-main .forum .tcmod { width:80px!important; text-align:center!important; }
+#pun#pun #pun-modviewforum #pun-main .forum .tcl { width:auto!important; text-align:left!important; }
+#pun#pun #pun-modviewforum #pun-main .forum .tcl :is(.intd,.tclcon) { min-width:0; }
+#pun#pun #pun-modviewforum #pun-main .forum .tclcon>a { font:600 17px/1.4 var(--font-body); }
+#pun#pun #pun-modviewforum #pun-main .forum .tcmod input { width:18px!important; height:18px!important; margin:0!important; accent-color:var(--teal); }
+#pun#pun #pun-modviewforum #pun-main .forum tbody tr:has(.tcmod input:checked) { background:color-mix(in srgb,var(--teal) 15%,var(--pale-green))!important; }
+#pun#pun #pun-modviewforum #pun-main .modmenu { margin:14px 0!important; padding:0!important; background:none!important; }
+#pun#pun #pun-modviewforum #pun-main .modmenu>.container {
+  display:flex!important; flex-wrap:wrap!important; align-items:center!important;
+  gap:10px!important; margin:0!important; padding:14px!important;
+  border:1px solid var(--sage-green)!important; border-radius:10px!important;
+  background:var(--pale-green)!important; box-sizing:border-box;
+}
+#pun#pun #pun-modviewforum #pun-main .modmenu input[type="submit"] {
+  min-height:36px!important; margin:0!important; padding:8px 14px!important;
+  border:0!important; border-radius:6px!important;
+  background:var(--midnight-gradient)!important; color:var(--white)!important;
+  font:600 12px/1.4 var(--font-ui)!important; cursor:pointer;
+}
+@media (min-width:801px) {
+  #pun#pun #pun-modviewforum #pun-main .forum thead { display:table-header-group!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody { display:table-row-group!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tr { display:table-row!important; }
+}
+@media (max-width:800px) {
+  #pun#pun #pun-modviewforum #pun-main .forum>.container { border:0!important; background:none!important; overflow:visible!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum table { display:block!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum thead { display:none!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody { display:grid!important; gap:10px!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr {
+    display:grid!important; grid-template-columns:minmax(0,1fr) minmax(0,1fr) 32px!important;
+    grid-template-areas:"title title select" "last last last" "replies views views"!important;
+    gap:10px!important; width:100%!important; margin:0!important; padding:12px!important;
+    border:1px solid var(--sage-green)!important; border-radius:10px!important;
+    background:var(--pale-green)!important; box-sizing:border-box!important;
+  }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>td {
+    display:block!important; width:auto!important; min-width:0!important;
+    padding:0!important; border:0!important; grid-column:auto!important; grid-row:auto!important;
+  }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>.tcl { grid-area:title!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>.tcmod { grid-area:select!important; align-self:start!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>.tcr {
+    grid-area:last!important; width:100%!important; max-width:none!important; justify-self:stretch!important; padding:10px!important; border-radius:7px!important;
+    background:var(--main-bg-pun,var(--white))!important; font-size:12px!important;
+  }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>.tc2 { grid-area:replies!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>.tc3 { grid-area:views!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum tbody>tr>:is(.tc2,.tc3) { text-align:left!important; font:400 11px/1.4 var(--font-ui)!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum .tc2::before { content:"Ответов: "; }
+  #pun#pun #pun-modviewforum #pun-main .forum .tc3::before { content:"Просмотров: "; }
+  #pun#pun #pun-modviewforum #pun-main .forum .tcl .intd { padding:0!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum .tcl .tclcon { margin:0!important; padding:0!important; }
+  #pun#pun #pun-modviewforum #pun-main .forum .tcl .icon { display:none!important; }
+  #pun#pun #pun-modviewforum #pun-main .modmenu strong { flex-basis:100%!important; }
+  #pun#pun #pun-modviewforum #pun-main .modmenu input[type="submit"] { flex:1 1 120px!important; min-width:0!important; }
+}
