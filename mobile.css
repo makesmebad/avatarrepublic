@@ -25352,3 +25352,9 @@ html body td[id="button-graffiti_rusff"],
   content:none!important;
   display:none!important;
 }
+
+/* Preserve authors' original nickname capitalization in moderation lists. */
+#pun#pun #pun-modviewforum #pun-main .forum :is(.byuser,.byuser-username),
+#pun#pun #pun-modviewforum #pun-main .forum .byuser a {
+  text-transform:none!important;
+}
