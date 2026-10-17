@@ -25282,3 +25282,26 @@ html body td[id="button-graffiti_rusff"],
   font-size:12px!important;
   line-height:1.4!important;
 }
+
+/* Square last-post thumbnails only on the forum moderation page. */
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar,
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar>a,
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar .avatar-image,
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar img {
+  display:block!important;
+  width:36px!important;
+  height:36px!important;
+  min-width:36px!important;
+  min-height:36px!important;
+  max-width:36px!important;
+  max-height:36px!important;
+  box-sizing:border-box!important;
+  border-radius:6px!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar .avatar-image {
+  background-size:cover!important;
+  background-position:center!important;
+}
+#pun#pun #pun-modviewforum #pun-main .forum td.tcr .user-avatar img {
+  object-fit:cover!important;
+}
