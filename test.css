@@ -12692,22 +12692,28 @@ html body .unread-notifications .notification-right > .notification-kind {
 #world-drawer .world-drawer-rail a[href*="page=plot"]>.forum-fa-icon::before { content:"\f02d"!important; }
 #world-drawer .world-drawer-rail a[href*="page=factions"]>.forum-fa-icon::before { content:"\f132"!important; }
 
-/* Sticker picker palette only: preserve the module's layout and visibility. */
+/* Sticker picker: forum surfaces and rounded controls; keep module layout. */
 html body .hvStickerPackModalContainer .hvStickerPackModal {
+  border-radius:16px!important;
+  box-shadow:inset 0 0 0 1px var(--main-border-color,var(--sage-green));
   background-color:var(--main-bg-pun,var(--white))!important;
   border-color:var(--main-border-color,var(--sage-green))!important;
   color:var(--primary-text)!important;
 }
 html body .hvStickerPackModalContainer :is(.hvStickerPackModalContent,.hvStickerPackModalAdd) {
+  border-radius:12px!important;
   background-color:var(--main-bg-pun,var(--white))!important;
   border-color:var(--main-border-color,var(--sage-green))!important;
 }
 html body .hvStickerPackModalContainer .hvStickerPackModalTabs {
+  border-radius:12px!important;
+  box-shadow:inset 0 0 0 1px var(--main-border-color,var(--sage-green));
   background-color:var(--pale-green)!important;
   border-color:var(--main-border-color,var(--sage-green))!important;
   color:var(--primary-text)!important;
 }
 html body .hvStickerPackModalContainer .hvStickerPackModalTab {
+  border-radius:8px!important;
   background-color:transparent!important;
   border-color:transparent!important;
   color:var(--primary-text)!important;
@@ -12721,4 +12727,8 @@ html body .hvStickerPackModalContainer .hvStickerPackModalTab.active {
   background-color:color-mix(in srgb,var(--teal) 24%,var(--main-bg-pun,var(--white)))!important;
   border-color:var(--teal)!important;
   color:var(--primary-text)!important;
+}
+
+html body .hvStickerPackModalContainer .hvStickerPackItem {
+  border-radius:10px!important;
 }
