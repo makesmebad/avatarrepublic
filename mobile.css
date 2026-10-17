@@ -24882,3 +24882,10 @@
     line-height:1.35;
   }
 }
+
+@media (max-width:800px) {
+  #pun#pun#pun #pun-index#pun-index #pun-main .category tbody>tr[id^="forum"]>td.tcr {
+    background-color:color-mix(in srgb,var(--teal) 16%,transparent)!important;
+    border-radius:8px!important;
+  }
+}
